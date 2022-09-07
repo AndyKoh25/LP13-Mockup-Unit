@@ -1,0 +1,4017 @@
+﻿<krpano version="1.19" title="LP13 Mockup Unit">
+
+	<include url="skin/vtourskin.xml" />
+
+	<!-- customize skin settings: maps, gyro, webvr, thumbnails, tooltips, layout, design, ... -->
+	<skin_settings maps="false"
+	               maps_type="google"
+	               maps_bing_api_key=""
+	               maps_google_api_key=""
+	               maps_zoombuttons="false"
+	               gyro="true"
+	               webvr="false"
+	               webvr_gyro_keeplookingdirection="false"
+	               webvr_prev_next_hotspots="true"
+	               littleplanetintro="false"
+	               title="true"
+	               thumbs="true"
+	               thumbs_width="120" thumbs_height="80" thumbs_padding="10" thumbs_crop="0|40|240|160"
+	               thumbs_opened="false"
+	               thumbs_text="false"
+	               thumbs_dragging="true"
+	               thumbs_onhoverscrolling="false"
+	               thumbs_scrollbuttons="false"
+	               thumbs_scrollindicator="false"
+	               thumbs_loop="false"
+	               tooltips_buttons="false"
+	               tooltips_thumbs="false"
+	               tooltips_hotspots="false"
+	               tooltips_mapspots="false"
+	               deeplinking="false"
+	               loadscene_flags="MERGE"
+	               loadscene_blend="OPENBLEND(0.5, 0.0, 0.75, 0.05, linear)"
+	               loadscene_blend_prev="SLIDEBLEND(0.5, 180, 0.75, linear)"
+	               loadscene_blend_next="SLIDEBLEND(0.5,   0, 0.75, linear)"
+	               loadingtext="loading..."
+	               layout_width="100%"
+	               layout_maxwidth="814"
+	               controlbar_width="-24"
+	               controlbar_height="40"
+	               controlbar_offset="20"
+	               controlbar_offset_closed="-40"
+	               controlbar_overlap.no-fractionalscaling="10"
+	               controlbar_overlap.fractionalscaling="0"
+	               design_skin_images="vtourskin.png"
+	               design_bgcolor="0x2D3E50"
+	               design_bgalpha="0.8"
+	               design_bgborder="0"
+	               design_bgroundedge="1"
+	               design_bgshadow="0 4 10 0x000000 0.3"
+	               design_thumbborder_bgborder="3 0xFFFFFF 1.0"
+	               design_thumbborder_padding="2"
+	               design_thumbborder_bgroundedge="0"
+	               design_text_css="color:#FFFFFF; font-family:Arial;"
+	               design_text_shadow="1"
+	               />
+
+	<!--
+	    For an alternative skin design either change the <skin_settings> values 
+	    from above or optionally include one of the predefined designs from below.
+	-->
+	<!-- <include url="skin/vtourskin_design_flat_light.xml"  /> -->
+	<!-- <include url="skin/vtourskin_design_glass.xml"       /> -->
+	<!-- <include url="skin/vtourskin_design_ultra_light.xml" /> -->
+	<!-- <include url="skin/vtourskin_design_117.xml"         /> -->
+	<!-- <include url="skin/vtourskin_design_117round.xml"    /> -->
+	<!-- <include url="skin/vtourskin_design_black.xml"       /> -->
+
+
+	<!-- startup action - load the first scene -->
+	<action name="startup" autorun="onstart">
+		if(startscene === null OR !scene[get(startscene)], copy(startscene,scene[0].name); );
+		loadscene(get(startscene), null, MERGE);
+		if(startactions !== null, startactions() );
+	</action>
+
+	<scene name="scene_Mockup_Floor_Plan" title="Mockup Floor Plan" onstart="" thumburl="panos/Mockup_Floor_Plan.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.000" vlookat="0.000" fovtype="MFOV" fov="0.943" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Mockup_Floor_Plan.tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.706967" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="6656" tiledimageheight="4706">
+				<cylinder url="panos/Mockup_Floor_Plan.tiles/l4/%0v/l4_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="3328" tiledimageheight="2352">
+				<cylinder url="panos/Mockup_Floor_Plan.tiles/l3/%0v/l3_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1664" tiledimageheight="1176">
+				<cylinder url="panos/Mockup_Floor_Plan.tiles/l2/%0v/l2_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="768" tiledimageheight="544">
+				<cylinder url="panos/Mockup_Floor_Plan.tiles/l1/%0v/l1_%0v_%0h.jpg" />
+			</level>
+		</image>
+		<hotspot name="T3B Lift Lobby"
+         type="text"
+         ath="-0.114" atv="-0.192" 
+         distorted="false"
+         html="[b]T3B Lift Lobby[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-0.114" atv="-0.188" distorted="false" zoom="false" linkedscene="scene_layout_plan_and_rcp_(t3b_lift_lobby)" />
+
+		<hotspot name="T3A Lift Lobby"
+         type="text"
+         ath="-0.088" atv="-0.11" 
+         distorted="false"
+         html="[b]T3A Lift Lobby[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-0.088" atv="-0.106" distorted="false" zoom="false" linkedscene="scene_layout_plan__(t3a_lift_lobby)" />
+
+		<hotspot name="Lift Car"
+         type="text"
+         ath="0.133" atv="-0.169" 
+         distorted="false"
+         html="[b]Lift Car[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="0.133" atv="-0.165" distorted="false" zoom="false" linkedscene="scene_layout_plan_and_rcp_(lift_car)" />
+		
+		<hotspot name="Location in T3 floor plan"
+         type="text"
+         ath="0.163" atv="-0.015" 
+         distorted="false"
+         html="[b]Location in T3 [br] Floor Plan[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="0.163" atv="-0.008" distorted="false" zoom="false" linkedscene="scene_2_bedrooms_location" />
+		
+		<hotspot name="Location in T3 floor plan1"
+         type="text"
+         ath="0.09" atv="-0.015" 
+         distorted="false"
+         html="[b]Location in T3 [br] Floor Plan[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot5" style="skin_hotspotstyle" ath="0.09" atv="-0.008" distorted="false" zoom="false" linkedscene="scene_bathroom_1_location" />
+
+		<hotspot name="Bathroom 1"
+         type="text"
+         ath="0.04" atv="-0.015" 
+         distorted="false"
+         html="[b]Bathroom 1[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot6" style="skin_hotspotstyle" ath="0.04" atv="-0.008" distorted="false" zoom="false" linkedscene="scene_layout_plan_and_rcp_(bathroom_1)" />
+
+		<hotspot name="Location in T3 floor plan2"
+         type="text"
+         ath="-0.051" atv="0.04" 
+         distorted="false"
+         html="[b]Location in T3 [br] Floor Plan[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot7" style="skin_hotspotstyle" ath="-0.051" atv="0.05" distorted="false" zoom="false" linkedscene="scene_enclosed_kitchen_location" />
+
+		<hotspot name="Enclosed Kitchen"
+         type="text"
+         ath="-0.051" atv="-0.006" 
+         distorted="false"
+         html="[b]Enclosed Kitchen[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot8" style="skin_hotspotstyle" ath="-0.051" atv="-0.000" distorted="false" zoom="false" linkedscene="scene_layout_plan_(enclosed_kitchen)" />
+
+		<hotspot name="Location in T3 floor plan3"
+         type="text"
+         ath="-0.240" atv="0.083" 
+         distorted="false"
+         html="[b]Location in T3 [br] Floor Plan[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot9" style="skin_hotspotstyle" ath="-0.240" atv="0.090" distorted="false" zoom="false" linkedscene="scene_bathroom_3_location" />
+
+		<hotspot name="Location in T3 floor plan4"
+         type="text"
+         ath="-0.240" atv="0.148" 
+         distorted="false"
+         html="[b]Location in T3 [br] Floor Plan[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot10" style="skin_hotspotstyle" ath="-0.240" atv="0.155" distorted="false" zoom="false" linkedscene="scene_bathroom_2_location" />
+
+		<hotspot name="Bathroom 3"
+         type="text"
+         ath="-0.3" atv="0.083" 
+         distorted="false"
+         html="[b]Bathroom 3[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot11" style="skin_hotspotstyle" ath="-0.3" atv="0.090" distorted="false" zoom="false" linkedscene="scene_layout_plan_and_rcp_(bathroom_3)" />
+
+		<hotspot name="Bathroom 2"
+         type="text"
+         ath="-0.3" atv="0.148" 
+         distorted="false"
+         html="[b]Bathroom 2[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot12" style="skin_hotspotstyle" ath="-0.3" atv="0.155" distorted="false" zoom="false" linkedscene="scene_layout_plan_and_rcp_(bathroom_2)" />
+
+	</scene>
+	
+	<scene name="scene_2_Bedrooms_Location" title="2 Bedrooms Location" onstart="" thumburl="panos/2_Bedrooms_Location.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/2_Bedrooms_Location.tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="1.414493" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="4672" tiledimageheight="6610">
+				<cylinder url="panos/2_Bedrooms_Location.tiles/l4/%0v/l4_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="2304" tiledimageheight="3260">
+				<cylinder url="panos/2_Bedrooms_Location.tiles/l3/%0v/l3_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1152" tiledimageheight="1630">
+				<cylinder url="panos/2_Bedrooms_Location.tiles/l2/%0v/l2_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="906">
+				<cylinder url="panos/2_Bedrooms_Location.tiles/l1/%0v/l1_%0v_%0h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Back to Mockup Floor Plan"
+         type="text"
+         ath="0.355" atv="0.017" 
+         distorted="false"
+         html="[b]Mockup Floor Plan[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="0.355" atv="0.020" distorted="false" zoom="false" linkedscene="scene_mockup_floor_plan" />
+
+	</scene>
+
+	<scene name="scene_Bathroom_1_Location" title="Bathroom 1 Location" onstart="" thumburl="panos/Bathroom_1_Location.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Bathroom_1_Location.tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="1.414493" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="4672" tiledimageheight="6610">
+				<cylinder url="panos/Bathroom_1_Location.tiles/l4/%0v/l4_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="2304" tiledimageheight="3260">
+				<cylinder url="panos/Bathroom_1_Location.tiles/l3/%0v/l3_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1152" tiledimageheight="1630">
+				<cylinder url="panos/Bathroom_1_Location.tiles/l2/%0v/l2_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="906">
+				<cylinder url="panos/Bathroom_1_Location.tiles/l1/%0v/l1_%0v_%0h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Back to Mockup Floor Plan"
+         type="text"
+         ath="0.355" atv="0.017" 
+         distorted="false"
+         html="[b]Mockup Floor Plan[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="0.355" atv="0.02" distorted="false" zoom="false" linkedscene="scene_mockup_floor_plan" />
+
+	</scene>
+
+	<scene name="scene_Bathroom_2_Location" title="Bathroom 2 Location" onstart="" thumburl="panos/Bathroom_2_Location.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Bathroom_2_Location.tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="1.414493" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="4672" tiledimageheight="6610">
+				<cylinder url="panos/Bathroom_2_Location.tiles/l4/%0v/l4_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="2304" tiledimageheight="3260">
+				<cylinder url="panos/Bathroom_2_Location.tiles/l3/%0v/l3_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1152" tiledimageheight="1630">
+				<cylinder url="panos/Bathroom_2_Location.tiles/l2/%0v/l2_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="906">
+				<cylinder url="panos/Bathroom_2_Location.tiles/l1/%0v/l1_%0v_%0h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Back to Mockup Floor Plan"
+         type="text"
+         ath="0.355" atv="0.017" 
+         distorted="false"
+         html="[b]Mockup Floor Plan[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="0.355" atv="0.02" distorted="false" zoom="false" linkedscene="scene_mockup_floor_plan" />
+
+	</scene>
+
+	<scene name="scene_Bathroom_3_Location" title="Bathroom 3 Location" onstart="" thumburl="panos/Bathroom_3_Location.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Bathroom_3_Location.tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="1.414493" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="4672" tiledimageheight="6610">
+				<cylinder url="panos/Bathroom_3_Location.tiles/l4/%0v/l4_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="2304" tiledimageheight="3260">
+				<cylinder url="panos/Bathroom_3_Location.tiles/l3/%0v/l3_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1152" tiledimageheight="1630">
+				<cylinder url="panos/Bathroom_3_Location.tiles/l2/%0v/l2_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="906">
+				<cylinder url="panos/Bathroom_3_Location.tiles/l1/%0v/l1_%0v_%0h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Back to Mockup Floor Plan"
+         type="text"
+         ath="0.355" atv="0.017" 
+         distorted="false"
+         html="[b]Mockup Floor Plan[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="0.355" atv="0.02" distorted="false" zoom="false" linkedscene="scene_mockup_floor_plan" />
+
+	</scene>
+
+	<scene name="scene_BIM_Elevation_A_(Bathroom_1)" title="BIM Elevation A (Bathroom 1)" onstart="" thumburl="panos/BIM_Elevation_A_(Bathroom_1).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/BIM_Elevation_A_(Bathroom_1).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.773500" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="2048" tiledimageheight="1584">
+				<cylinder url="panos/BIM_Elevation_A_(Bathroom_1).tiles/l2/%v/l2_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1024" tiledimageheight="794">
+				<cylinder url="panos/BIM_Elevation_A_(Bathroom_1).tiles/l1/%v/l1_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Elevation A &amp; B (Bathroom 1)"
+         type="text"
+         ath="0.017" atv="0.192" 
+         distorted="false"
+         html="[b]Elevation A &amp; B[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="0.017" atv="0.195" distorted="false" zoom="false" linkedscene="scene_elevation_a___b_(bathroom_1)" />
+
+	</scene>
+
+	<scene name="scene_BIM_Elevation_A_(Bathroom_2)" title="BIM Elevation A (Bathroom 2)" onstart="" thumburl="panos/BIM_Elevation_A_(Bathroom_2).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/BIM_Elevation_A_(Bathroom_2).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.773178" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="2304" tiledimageheight="1782">
+				<cylinder url="panos/BIM_Elevation_A_(Bathroom_2).tiles/l2/%v/l2_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1152" tiledimageheight="892">
+				<cylinder url="panos/BIM_Elevation_A_(Bathroom_2).tiles/l1/%v/l1_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Elevation A &amp; B (Bathroom 2)"
+         type="text"
+         ath="0.000" atv="0.146" 
+         distorted="false"
+         html="[b]Elevation A &amp; B[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="0.000" atv="0.149" distorted="false" zoom="false" linkedscene="scene_elevation_a___b_(bathroom_2)" />
+
+	</scene>
+
+	<scene name="scene_BIM_Elevation_A_(Bathroom_3)" title="BIM Elevation A (Bathroom 3)" onstart="" thumburl="panos/BIM_Elevation_A_(Bathroom_3).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/BIM_Elevation_A_(Bathroom_3).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.773178" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="2304" tiledimageheight="1782">
+				<cylinder url="panos/BIM_Elevation_A_(Bathroom_3).tiles/l2/%v/l2_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1152" tiledimageheight="892">
+				<cylinder url="panos/BIM_Elevation_A_(Bathroom_3).tiles/l1/%v/l1_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Elevation A &amp; B (Bathroom 3)"
+         type="text"
+         ath="-0.008" atv="0.161" 
+         distorted="false"
+         html="[b]Elevation A &amp; B[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-0.008" atv="0.164" distorted="false" zoom="false" linkedscene="scene_elevation_a___b_(bathroom_3)" />
+
+	</scene>
+
+	<scene name="scene_BIM_Elevation_A_(Enclosed_Kitchen)" title="BIM Elevation A (Enclosed Kitchen)" onstart="" thumburl="panos/BIM_Elevation_A_(Enclosed_Kitchen).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/BIM_Elevation_A_(Enclosed_Kitchen).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.773178" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="2304" tiledimageheight="1782">
+				<cylinder url="panos/BIM_Elevation_A_(Enclosed_Kitchen).tiles/l2/%v/l2_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1152" tiledimageheight="892">
+				<cylinder url="panos/BIM_Elevation_A_(Enclosed_Kitchen).tiles/l1/%v/l1_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Elevation A &amp; B (Enclosed Kitchen)"
+         type="text"
+         ath="-0.002" atv="0.141" 
+         distorted="false"
+         html="[b]Elevation A &amp; B[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-0.002" atv="0.144" distorted="false" zoom="false" linkedscene="scene_elevation_a___b_(enclosed_kitchen)" />
+
+	</scene>
+
+	<scene name="scene_BIM_Elevation_B_(Bathroom_1)" title="BIM Elevation B (Bathroom 1)" onstart="" thumburl="panos/BIM_Elevation_B_(Bathroom_1).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/BIM_Elevation_B_(Bathroom_1).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.773178" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="2304" tiledimageheight="1782">
+				<cylinder url="panos/BIM_Elevation_B_(Bathroom_1).tiles/l2/%v/l2_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1152" tiledimageheight="892">
+				<cylinder url="panos/BIM_Elevation_B_(Bathroom_1).tiles/l1/%v/l1_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Elevation A &amp; B (Bathroom 1)1"
+         type="text"
+         ath="-0.017" atv="0.159" 
+         distorted="false"
+         html="[b]Elevation A &amp; B[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="0.017" atv="0.162" distorted="false" zoom="false" linkedscene="scene_elevation_a___b_(bathroom_1)" />
+
+	</scene>
+
+	<scene name="scene_BIM_Elevation_B_(Bathroom_2)" title="BIM Elevation B (Bathroom 2)" onstart="" thumburl="panos/BIM_Elevation_B_(Bathroom_2).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/BIM_Elevation_B_(Bathroom_2).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.773178" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="2304" tiledimageheight="1782">
+				<cylinder url="panos/BIM_Elevation_B_(Bathroom_2).tiles/l2/%v/l2_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1152" tiledimageheight="892">
+				<cylinder url="panos/BIM_Elevation_B_(Bathroom_2).tiles/l1/%v/l1_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Elevation A &amp; B (Bathroom 2)1"
+         type="text"
+         ath="0.070" atv="0.242" 
+         distorted="false"
+         html="[b]Elevation A &amp; B[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="0.070" atv="0.245" distorted="false" zoom="false" linkedscene="scene_elevation_a___b_(bathroom_2)" />
+
+	</scene>
+
+	<scene name="scene_BIM_Elevation_B_(Bathroom_3)" title="BIM Elevation B (Bathroom 3)" onstart="" thumburl="panos/BIM_Elevation_B_(Bathroom_3).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/BIM_Elevation_B_(Bathroom_3).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.773178" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="2304" tiledimageheight="1782">
+				<cylinder url="panos/BIM_Elevation_B_(Bathroom_3).tiles/l2/%v/l2_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1152" tiledimageheight="892">
+				<cylinder url="panos/BIM_Elevation_B_(Bathroom_3).tiles/l1/%v/l1_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Elevation A &amp; B (Bathroom 3)1"
+         type="text"
+         ath="0.044" atv="0.255" 
+         distorted="false"
+         html="[b]Elevation A &amp; B[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="0.044" atv="0.258" distorted="false" zoom="false" linkedscene="scene_elevation_a___b_(bathroom_3)" />
+
+	</scene>
+
+	<scene name="scene_BIM_Elevation_B_(Enclosed_Kitchen)" title="BIM Elevation B (Enclosed Kitchen)" onstart="" thumburl="panos/BIM_Elevation_B_(Enclosed_Kitchen).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/BIM_Elevation_B_(Enclosed_Kitchen).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.773178" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="2304" tiledimageheight="1782">
+				<cylinder url="panos/BIM_Elevation_B_(Enclosed_Kitchen).tiles/l2/%v/l2_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1152" tiledimageheight="892">
+				<cylinder url="panos/BIM_Elevation_B_(Enclosed_Kitchen).tiles/l1/%v/l1_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Elevation A &amp; B (Enclosed Kitchen)1"
+         type="text"
+         ath="-0.014" atv="0.149" 
+         distorted="false"
+         html="[b]Elevation A &amp; B[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-0.014" atv="0.152" distorted="false" zoom="false" linkedscene="scene_elevation_a___b_(enclosed_kitchen)" />
+
+	</scene>
+
+	<scene name="scene_BIM_Elevation_C_(Bathroom_1)" title="BIM Elevation C (Bathroom 1)" onstart="" thumburl="panos/BIM_Elevation_C_(Bathroom_1).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/BIM_Elevation_C_(Bathroom_1).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.773178" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="2304" tiledimageheight="1782">
+				<cylinder url="panos/BIM_Elevation_C_(Bathroom_1).tiles/l2/%v/l2_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1152" tiledimageheight="892">
+				<cylinder url="panos/BIM_Elevation_C_(Bathroom_1).tiles/l1/%v/l1_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Elevation C &amp; D (Bathroom 1)"
+         type="text"
+         ath="0.030" atv="0.277" 
+         distorted="false"
+         html="[b]Elevation C &amp; D[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="0.030" atv="0.280" distorted="false" zoom="false" linkedscene="scene_elevation_c___d_(bathroom_1)" />
+
+	</scene>
+
+	<scene name="scene_BIM_Elevation_C_(Bathroom_2)" title="BIM Elevation C (Bathroom 2)" onstart="" thumburl="panos/BIM_Elevation_C_(Bathroom_2).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/BIM_Elevation_C_(Bathroom_2).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.773178" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="2304" tiledimageheight="1782">
+				<cylinder url="panos/BIM_Elevation_C_(Bathroom_2).tiles/l2/%v/l2_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1152" tiledimageheight="892">
+				<cylinder url="panos/BIM_Elevation_C_(Bathroom_2).tiles/l1/%v/l1_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Elevation C &amp; D (Bathroom 2)"
+         type="text"
+         ath="0.000" atv="0.146" 
+         distorted="false"
+         html="[b]Elevation C &amp; D[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="0.000" atv="0.149" distorted="false" zoom="false" linkedscene="scene_elevation_c___d_(bathroom_2)" />
+
+	</scene>
+
+	<scene name="scene_BIM_Elevation_C_(Bathroom_3)" title="BIM Elevation C (Bathroom 3)" onstart="" thumburl="panos/BIM_Elevation_C_(Bathroom_3).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/BIM_Elevation_C_(Bathroom_3).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.773178" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="2304" tiledimageheight="1782">
+				<cylinder url="panos/BIM_Elevation_C_(Bathroom_3).tiles/l2/%v/l2_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1152" tiledimageheight="892">
+				<cylinder url="panos/BIM_Elevation_C_(Bathroom_3).tiles/l1/%v/l1_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Elevation C &amp; D (Bathroom 3)"
+         type="text"
+         ath="0.002" atv="0.269" 
+         distorted="false"
+         html="[b]Elevation C &amp; D[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="0.002" atv="0.272" distorted="false" zoom="false" linkedscene="scene_elevation_c___d_(bathroom_3)" />
+
+	</scene>
+
+	<scene name="scene_BIM_Elevation_C_(Enclosed_Kitchen)" title="BIM Elevation C (Enclosed Kitchen)" onstart="" thumburl="panos/BIM_Elevation_C_(Enclosed_Kitchen).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/BIM_Elevation_C_(Enclosed_Kitchen).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.773178" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="2304" tiledimageheight="1782">
+				<cylinder url="panos/BIM_Elevation_C_(Enclosed_Kitchen).tiles/l2/%v/l2_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1152" tiledimageheight="892">
+				<cylinder url="panos/BIM_Elevation_C_(Enclosed_Kitchen).tiles/l1/%v/l1_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Elevation C &amp; D (Enclosed Kitchen)"
+         type="text"
+         ath="-0.002" atv="0.269" 
+         distorted="false"
+         html="[b]Elevation C &amp; D[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-0.002" atv="0.282" distorted="false" zoom="false" linkedscene="scene_elevation_c_(enclosed_kitchen)" />
+
+	</scene>
+
+	<scene name="scene_BIM_Elevation_D_(Bathroom_1)" title="BIM Elevation D (Bathroom 1)" onstart="" thumburl="panos/BIM_Elevation_D_(Bathroom_1).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/BIM_Elevation_D_(Bathroom_1).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.773500" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="2048" tiledimageheight="1584">
+				<cylinder url="panos/BIM_Elevation_D_(Bathroom_1).tiles/l2/%v/l2_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1024" tiledimageheight="794">
+				<cylinder url="panos/BIM_Elevation_D_(Bathroom_1).tiles/l1/%v/l1_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Elevation C &amp; D (Bathroom 1)1"
+         type="text"
+         ath="-0.006" atv="0.191" 
+         distorted="false"
+         html="[b]Elevation C &amp; D[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-0.006" atv="0.194" distorted="false" zoom="false" linkedscene="scene_elevation_c___d_(bathroom_1)" />
+
+	</scene>
+
+	<scene name="scene_BIM_Elevation_D_(Bathroom_2)" title="BIM Elevation D (Bathroom 2)" onstart="" thumburl="panos/BIM_Elevation_D_(Bathroom_2).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/BIM_Elevation_D_(Bathroom_2).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.773178" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="2304" tiledimageheight="1782">
+				<cylinder url="panos/BIM_Elevation_D_(Bathroom_2).tiles/l2/%v/l2_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1152" tiledimageheight="892">
+				<cylinder url="panos/BIM_Elevation_D_(Bathroom_2).tiles/l1/%v/l1_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Elevation C &amp; D (Bathroom 2)1"
+         type="text"
+         ath="-0.008" atv="0.117" 
+         distorted="false"
+         html="[b]Elevation C &amp; D[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-0.008" atv="0.120" distorted="false" zoom="false" linkedscene="scene_elevation_c___d_(bathroom_2)" />
+
+	</scene>
+
+	<scene name="scene_BIM_Elevation_D_(Bathroom_3)" title="BIM Elevation D (Bathroom 3)" onstart="" thumburl="panos/BIM_Elevation_D_(Bathroom_3).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/BIM_Elevation_D_(Bathroom_3).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.773178" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="2304" tiledimageheight="1782">
+				<cylinder url="panos/BIM_Elevation_D_(Bathroom_3).tiles/l2/%v/l2_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1152" tiledimageheight="892">
+				<cylinder url="panos/BIM_Elevation_D_(Bathroom_3).tiles/l1/%v/l1_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Elevation C &amp; D (Bathroom 3)1"
+         type="text"
+         ath="-0.017" atv="0.129" 
+         distorted="false"
+         html="[b]Elevation C &amp; D[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-0.017" atv="0.132" distorted="false" zoom="false" linkedscene="scene_elevation_c___d_(bathroom_3)" />
+
+	</scene>
+
+	<scene name="scene_BIM_Elevation_D_(Enclosed_Kitchen)" title="BIM Elevation D (Enclosed Kitchen)" onstart="" thumburl="panos/BIM_Elevation_D_(Enclosed_Kitchen).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/BIM_Elevation_D_(Enclosed_Kitchen).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.773178" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="2304" tiledimageheight="1782">
+				<cylinder url="panos/BIM_Elevation_D_(Enclosed_Kitchen).tiles/l2/%v/l2_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1152" tiledimageheight="892">
+				<cylinder url="panos/BIM_Elevation_D_(Enclosed_Kitchen).tiles/l1/%v/l1_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Elevation C &amp; D (Enclosed Kitchen)1"
+         type="text"
+         ath="-0.090" atv="0.243" 
+         distorted="false"
+         html="[b]Elevation C &amp; D[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-0.090" atv="0.246" distorted="false" zoom="false" linkedscene="scene_elevation_d_(enclosed_kitchen)" />
+
+	</scene>
+
+	<scene name="scene_BIM_ElevationT3A_Lift_Lobby" title="BIM ElevationT3A Lift Lobby" onstart="" thumburl="panos/BIM_ElevationT3A_Lift_Lobby.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/BIM_ElevationT3A_Lift_Lobby.tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.773178" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="2304" tiledimageheight="1782">
+				<cylinder url="panos/BIM_ElevationT3A_Lift_Lobby.tiles/l2/%v/l2_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1152" tiledimageheight="892">
+				<cylinder url="panos/BIM_ElevationT3A_Lift_Lobby.tiles/l1/%v/l1_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Layout Plan (T3A Lift Lobby)3"
+         type="text"
+         ath="0.192" atv="0.259" 
+         distorted="false"
+         html="[b]Layout Plan (T3A Lift Lobby)[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="0.192" atv="0.262" distorted="false" zoom="false" linkedscene="scene_layout_plan__(t3a_lift_lobby)" />
+
+	</scene>
+
+	<scene name="scene_BIM_ElevationT3B_Lift_Lobby" title="BIM ElevationT3B Lift Lobby" onstart="" thumburl="panos/BIM_ElevationT3B_Lift_Lobby.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/BIM_ElevationT3B_Lift_Lobby.tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.773178" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="2304" tiledimageheight="1782">
+				<cylinder url="panos/BIM_ElevationT3B_Lift_Lobby.tiles/l2/%v/l2_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1152" tiledimageheight="892">
+				<cylinder url="panos/BIM_ElevationT3B_Lift_Lobby.tiles/l1/%v/l1_%v_%h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Layout Plan (T3B Lift Lobby)2"
+         type="text"
+         ath="-0.018" atv="0.311" 
+         distorted="false"
+         html="[b]Layout Plan (T3B Lift Lobby)[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-0.018" atv="0.314" distorted="false" zoom="false" linkedscene="scene_layout_plan_and_rcp_(t3b_lift_lobby)" />
+
+	</scene>
+
+	<scene name="scene_Elevation_A___B_(Bathroom_1)" title="Elevation A &amp; B (Bathroom 1)" onstart="" thumburl="panos/Elevation_A___B_(Bathroom_1).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Elevation_A___B_(Bathroom_1).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.706967" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="6656" tiledimageheight="4706">
+				<cylinder url="panos/Elevation_A___B_(Bathroom_1).tiles/l4/%0v/l4_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="3328" tiledimageheight="2352">
+				<cylinder url="panos/Elevation_A___B_(Bathroom_1).tiles/l3/%0v/l3_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1664" tiledimageheight="1176">
+				<cylinder url="panos/Elevation_A___B_(Bathroom_1).tiles/l2/%0v/l2_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="768" tiledimageheight="544">
+				<cylinder url="panos/Elevation_A___B_(Bathroom_1).tiles/l1/%0v/l1_%0v_%0h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="BIM Elevation A (Bathroom 1)"
+         type="text"
+         ath="-0.074" atv="-0.293" 
+         distorted="false"
+         html="[b]BIM Elevation A[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-0.074" atv="-0.29" distorted="false" zoom="false" linkedscene="scene_bim_elevation_a_(bathroom_1)" />
+
+		<hotspot name="BIM Elevation B (Bathroom 1)"
+         type="text"
+         ath="0.151" atv="-0.293" 
+         distorted="false"
+         html="[b]BIM Elevation B[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="0.151" atv="-0.29" distorted="false" zoom="false" linkedscene="scene_bim_elevation_b_(bathroom_1)" />
+
+		<hotspot name="Layout Plan (Bathroom 1)"
+         type="text"
+         ath="0.407" atv="-0.293" 
+         distorted="false"
+         html="[b]Layout Plan (Bathroom 1)[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="0.407" atv="-0.29" distorted="false" zoom="false" linkedscene="scene_layout_plan_and_rcp_(bathroom_1)" />
+
+	</scene>
+
+	<scene name="scene_Elevation_A___B_(Bathroom_2)" title="Elevation A &amp; B (Bathroom 2)" onstart="" thumburl="panos/Elevation_A___B_(Bathroom_2).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Elevation_A___B_(Bathroom_2).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.706967" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="6656" tiledimageheight="4706">
+				<cylinder url="panos/Elevation_A___B_(Bathroom_2).tiles/l4/%0v/l4_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="3328" tiledimageheight="2352">
+				<cylinder url="panos/Elevation_A___B_(Bathroom_2).tiles/l3/%0v/l3_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1664" tiledimageheight="1176">
+				<cylinder url="panos/Elevation_A___B_(Bathroom_2).tiles/l2/%0v/l2_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="768" tiledimageheight="544">
+				<cylinder url="panos/Elevation_A___B_(Bathroom_2).tiles/l1/%0v/l1_%0v_%0h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="BIM Elevation A (Bathroom 2)"
+         type="text"
+         ath="-0.009" atv="-0.243" 
+         distorted="false"
+         html="[b]BIM Elevation A[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-0.009" atv="-0.24" distorted="false" zoom="false" linkedscene="scene_bim_elevation_a_(bathroom_2)" />
+
+		<hotspot name="BIM Elevation B (Bathroom 2)"
+         type="text"
+         ath="0.126" atv="-0.243" 
+         distorted="false"
+         html="[b]BIM Elevation B[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="0.126" atv="-0.24" distorted="false" zoom="false" linkedscene="scene_bim_elevation_b_(bathroom_2)" />
+
+		<hotspot name="Layout Plan (Bathroom 2)"
+         type="text"
+         ath="0.409" atv="-0.297" 
+         distorted="false"
+         html="[b]Layout Plan (Bathroom 2)[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="0.409" atv="-0.294" distorted="false" zoom="false" linkedscene="scene_layout_plan_and_rcp_(bathroom_2)" />
+
+	</scene>
+
+	<scene name="scene_Elevation_A___B_(Bathroom_3)" title="Elevation A &amp; B (Bathroom 3)" onstart="" thumburl="panos/Elevation_A___B_(Bathroom_3).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Elevation_A___B_(Bathroom_3).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.706967" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="6656" tiledimageheight="4706">
+				<cylinder url="panos/Elevation_A___B_(Bathroom_3).tiles/l4/%0v/l4_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="3328" tiledimageheight="2352">
+				<cylinder url="panos/Elevation_A___B_(Bathroom_3).tiles/l3/%0v/l3_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1664" tiledimageheight="1176">
+				<cylinder url="panos/Elevation_A___B_(Bathroom_3).tiles/l2/%0v/l2_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="768" tiledimageheight="544">
+				<cylinder url="panos/Elevation_A___B_(Bathroom_3).tiles/l1/%0v/l1_%0v_%0h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="BIM Elevation A (Bathroom 3)"
+         type="text"
+         ath="-0.018" atv="-0.241" 
+         distorted="false"
+         html="[b]BIM Elevation A[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-0.018" atv="-0.238" distorted="false" zoom="false" linkedscene="scene_bim_elevation_a_(bathroom_3)" />
+
+		<hotspot name="BIM Elevation B (Bathroom 3)"
+         type="text"
+         ath="0.094" atv="-0.241" 
+         distorted="false"
+         html="[b]BIM Elevation B[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="0.094" atv="-0.238" distorted="false" zoom="false" linkedscene="scene_bim_elevation_b_(bathroom_3)" />
+
+		<hotspot name="Layout Plan (Bathroom 3)"
+         type="text"
+         ath="0.370" atv="-0.296" 
+         distorted="false"
+         html="[b]Layout Plan (Bathroom 3)[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="0.370" atv="-0.293" distorted="false" zoom="false" linkedscene="scene_layout_plan_and_rcp_(bathroom_3)" />
+
+	</scene>
+
+	<scene name="scene_Elevation_A___B_(Enclosed_Kitchen)" title="Elevation A &amp; B (Enclosed Kitchen)" onstart="" thumburl="panos/Elevation_A___B_(Enclosed_Kitchen).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Elevation_A___B_(Enclosed_Kitchen).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.706967" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="6656" tiledimageheight="4706">
+				<cylinder url="panos/Elevation_A___B_(Enclosed_Kitchen).tiles/l4/%0v/l4_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="3328" tiledimageheight="2352">
+				<cylinder url="panos/Elevation_A___B_(Enclosed_Kitchen).tiles/l3/%0v/l3_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1664" tiledimageheight="1176">
+				<cylinder url="panos/Elevation_A___B_(Enclosed_Kitchen).tiles/l2/%0v/l2_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="768" tiledimageheight="544">
+				<cylinder url="panos/Elevation_A___B_(Enclosed_Kitchen).tiles/l1/%0v/l1_%0v_%0h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="BIM Elevation A (Enclosed Kitchen)"
+         type="text"
+         ath="-0.076" atv="-0.283" 
+         distorted="false"
+         html="[b]BIM Elevation A[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-0.076" atv="-0.28" distorted="false" zoom="false" linkedscene="scene_bim_elevation_a_(enclosed_kitchen)" />
+
+		<hotspot name="BIM Elevation B (Enclosed Kitchen)"
+         type="text"
+         ath="0.149" atv="-0.283" 
+         distorted="false"
+         html="[b]BIM Elevation B[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="0.149" atv="-0.28" distorted="false" zoom="false" linkedscene="scene_bim_elevation_b_(enclosed_kitchen)" />
+
+		<hotspot name="Layout Plan (Enclosed Kitchen)"
+         type="text"
+         ath="0.386" atv="-0.318" 
+         distorted="false"
+         html="[b]Layout Plan (Enclosed Kitchen)[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="0.386" atv="-0.315" distorted="false" zoom="false" linkedscene="scene_layout_plan_(enclosed_kitchen)" />
+
+	</scene>
+
+	<scene name="scene_Elevation_A___B_(Lift_Car)" title="Elevation A &amp; B (Lift Car)" onstart="" thumburl="panos/Elevation_A___B_(Lift_Car).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Elevation_A___B_(Lift_Car).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.706967" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="6656" tiledimageheight="4706">
+				<cylinder url="panos/Elevation_A___B_(Lift_Car).tiles/l4/%0v/l4_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="3328" tiledimageheight="2352">
+				<cylinder url="panos/Elevation_A___B_(Lift_Car).tiles/l3/%0v/l3_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1664" tiledimageheight="1176">
+				<cylinder url="panos/Elevation_A___B_(Lift_Car).tiles/l2/%0v/l2_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="768" tiledimageheight="544">
+				<cylinder url="panos/Elevation_A___B_(Lift_Car).tiles/l1/%0v/l1_%0v_%0h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Layout Plan (Lift Car)"
+         type="text"
+         ath="0.345" atv="-0.317" 
+         distorted="false"
+         html="[b]Layout Plan (Lift Car)[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="0.345" atv="-0.314" distorted="false" zoom="false" linkedscene="scene_layout_plan_and_rcp_(lift_car)" />
+
+	</scene>
+
+	<scene name="scene_Elevation_A___B_(T3A_Lift_Lobby)" title="Elevation A &amp; B (T3A Lift Lobby)" onstart="" thumburl="panos/Elevation_A___B_(T3A_Lift_Lobby).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Elevation_A___B_(T3A_Lift_Lobby).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.706967" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="6656" tiledimageheight="4706">
+				<cylinder url="panos/Elevation_A___B_(T3A_Lift_Lobby).tiles/l4/%0v/l4_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="3328" tiledimageheight="2352">
+				<cylinder url="panos/Elevation_A___B_(T3A_Lift_Lobby).tiles/l3/%0v/l3_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1664" tiledimageheight="1176">
+				<cylinder url="panos/Elevation_A___B_(T3A_Lift_Lobby).tiles/l2/%0v/l2_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="768" tiledimageheight="544">
+				<cylinder url="panos/Elevation_A___B_(T3A_Lift_Lobby).tiles/l1/%0v/l1_%0v_%0h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Layout Plan (T3A Lift Lobby)"
+         type="text"
+         ath="0.33" atv="-0.303" 
+         distorted="false"
+         html="[b]Layout Plan (T3A Lift Lobby)[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="0.33" atv="-0.3" distorted="false" zoom="false" linkedscene="scene_layout_plan__(t3a_lift_lobby)" />
+
+	</scene>
+
+	<scene name="scene_Elevation_A__B__C___D_(T3B_Lift_Lobby)" title="Elevation A, B, C &amp; D (T3B Lift Lobby)" onstart="" thumburl="panos/Elevation_A__B__C___D_(T3B_Lift_Lobby).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Elevation_A__B__C___D_(T3B_Lift_Lobby).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.706967" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="6656" tiledimageheight="4706">
+				<cylinder url="panos/Elevation_A__B__C___D_(T3B_Lift_Lobby).tiles/l4/%0v/l4_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="3328" tiledimageheight="2352">
+				<cylinder url="panos/Elevation_A__B__C___D_(T3B_Lift_Lobby).tiles/l3/%0v/l3_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1664" tiledimageheight="1176">
+				<cylinder url="panos/Elevation_A__B__C___D_(T3B_Lift_Lobby).tiles/l2/%0v/l2_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="768" tiledimageheight="544">
+				<cylinder url="panos/Elevation_A__B__C___D_(T3B_Lift_Lobby).tiles/l1/%0v/l1_%0v_%0h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Layout Plan (T3B Lift Lobby)"
+         type="text"
+         ath="0.4" atv="-0.333" 
+         distorted="false"
+         html="[b]Layout Plan (T3B Lift Lobby)[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="0.400" atv="-0.33" distorted="false" zoom="false" linkedscene="scene_layout_plan_and_rcp_(t3b_lift_lobby)" />
+
+	</scene>
+
+	<scene name="scene_Elevation_C___D_(Bathroom_1)" title="Elevation C &amp; D (Bathroom 1)" onstart="" thumburl="panos/Elevation_C___D_(Bathroom_1).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Elevation_C___D_(Bathroom_1).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.706967" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="6656" tiledimageheight="4706">
+				<cylinder url="panos/Elevation_C___D_(Bathroom_1).tiles/l4/%0v/l4_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="3328" tiledimageheight="2352">
+				<cylinder url="panos/Elevation_C___D_(Bathroom_1).tiles/l3/%0v/l3_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1664" tiledimageheight="1176">
+				<cylinder url="panos/Elevation_C___D_(Bathroom_1).tiles/l2/%0v/l2_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="768" tiledimageheight="544">
+				<cylinder url="panos/Elevation_C___D_(Bathroom_1).tiles/l1/%0v/l1_%0v_%0h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="BIM Elevation C (Bathroom 1)"
+         type="text"
+         ath="-0.041" atv="-0.236" 
+         distorted="false"
+         html="[b]BIM Elevation C[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-0.041" atv="-0.233" distorted="false" zoom="false" linkedscene="scene_bim_elevation_c_(bathroom_1)" />
+
+		<hotspot name="BIM Elevation D (Bathroom 1)"
+         type="text"
+         ath="0.091" atv="-0.236" 
+         distorted="false"
+         html="[b]BIM Elevation D[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="0.091" atv="-0.233" distorted="false" zoom="false" linkedscene="scene_bim_elevation_d_(bathroom_1)" />
+
+		<hotspot name="Layout Plan (Bathroom 1)1"
+         type="text"
+         ath="0.375" atv="-0.303" 
+         distorted="false"
+         html="[b]Layout Plan (Bathroom 1)[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="0.375" atv="-0.300" distorted="false" zoom="false" linkedscene="scene_layout_plan_and_rcp_(bathroom_1)" />
+
+	</scene>
+
+	<scene name="scene_Elevation_C___D_(Bathroom_2)" title="Elevation C &amp; D (Bathroom 2)" onstart="" thumburl="panos/Elevation_C___D_(Bathroom_2).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Elevation_C___D_(Bathroom_2).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.706967" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="6656" tiledimageheight="4706">
+				<cylinder url="panos/Elevation_C___D_(Bathroom_2).tiles/l4/%0v/l4_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="3328" tiledimageheight="2352">
+				<cylinder url="panos/Elevation_C___D_(Bathroom_2).tiles/l3/%0v/l3_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1664" tiledimageheight="1176">
+				<cylinder url="panos/Elevation_C___D_(Bathroom_2).tiles/l2/%0v/l2_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="768" tiledimageheight="544">
+				<cylinder url="panos/Elevation_C___D_(Bathroom_2).tiles/l1/%0v/l1_%0v_%0h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="BIM Elevation C (Bathroom 2)"
+         type="text"
+         ath="-0.014" atv="-0.238" 
+         distorted="false"
+         html="[b]BIM Elevation C[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-0.014" atv="-0.235" distorted="false" zoom="false" linkedscene="scene_bim_elevation_c_(bathroom_2)" />
+
+		<hotspot name="BIM Elevation D (Bathroom 2)"
+         type="text"
+         ath="0.135" atv="-0.238" 
+         distorted="false"
+         html="[b]BIM Elevation D[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="0.135" atv="-0.235" distorted="false" zoom="false" linkedscene="scene_bim_elevation_d_(bathroom_2)" />
+
+		<hotspot name="Layout Plan (Bathroom 2)1"
+         type="text"
+         ath="0.393" atv="-0.293" 
+         distorted="false"
+         html="[b]Layout Plan (Bathroom 2)[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="0.393" atv="-0.290" distorted="false" zoom="false" linkedscene="scene_layout_plan_and_rcp_(bathroom_2)" />
+
+	</scene>
+
+	<scene name="scene_Elevation_C___D_(Bathroom_3)" title="Elevation C &amp; D (Bathroom 3)" onstart="" thumburl="panos/Elevation_C___D_(Bathroom_3).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Elevation_C___D_(Bathroom_3).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.706967" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="6656" tiledimageheight="4706">
+				<cylinder url="panos/Elevation_C___D_(Bathroom_3).tiles/l4/%0v/l4_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="3328" tiledimageheight="2352">
+				<cylinder url="panos/Elevation_C___D_(Bathroom_3).tiles/l3/%0v/l3_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1664" tiledimageheight="1176">
+				<cylinder url="panos/Elevation_C___D_(Bathroom_3).tiles/l2/%0v/l2_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="768" tiledimageheight="544">
+				<cylinder url="panos/Elevation_C___D_(Bathroom_3).tiles/l1/%0v/l1_%0v_%0h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="BIM Elevation C (Bathroom 3)"
+         type="text"
+         ath="-0.086" atv="-0.288" 
+         distorted="false"
+         html="[b]BIM Elevation C[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-0.086" atv="-0.285" distorted="false" zoom="false" linkedscene="scene_bim_elevation_c_(bathroom_3)" />
+
+		<hotspot name="BIM Elevation D (Bathroom 3)"
+         type="text"
+         ath="0.154" atv="-0.288" 
+         distorted="false"
+         html="[b]BIM Elevation D[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="0.154" atv="-0.285" distorted="false" zoom="false" linkedscene="scene_bim_elevation_d_(bathroom_3)" />
+
+		<hotspot name="Layout Plan (Bathroom 3)1"
+         type="text"
+         ath="0.395" atv="-0.288" 
+         distorted="false"
+         html="[b]Layout Plan (Bathroom 2)[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="0.395" atv="-0.285" distorted="false" zoom="false" linkedscene="scene_layout_plan_and_rcp_(bathroom_3)" />
+
+	</scene>
+
+	<scene name="scene_Elevation_C_(Enclosed_Kitchen)" title="Elevation C (Enclosed Kitchen)" onstart="" thumburl="panos/Elevation_C_(Enclosed_Kitchen).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Elevation_C_(Enclosed_Kitchen).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.706967" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="6656" tiledimageheight="4706">
+				<cylinder url="panos/Elevation_C_(Enclosed_Kitchen).tiles/l4/%0v/l4_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="3328" tiledimageheight="2352">
+				<cylinder url="panos/Elevation_C_(Enclosed_Kitchen).tiles/l3/%0v/l3_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1664" tiledimageheight="1176">
+				<cylinder url="panos/Elevation_C_(Enclosed_Kitchen).tiles/l2/%0v/l2_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="768" tiledimageheight="544">
+				<cylinder url="panos/Elevation_C_(Enclosed_Kitchen).tiles/l1/%0v/l1_%0v_%0h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="BIM Elevation C (Enclosed Kitchen)"
+         type="text"
+         ath="-0.150" atv="-0.293" 
+         distorted="false"
+         html="[b]BIM Elevation C[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-0.150" atv="-0.29" distorted="false" zoom="false" linkedscene="scene_bim_elevation_c_(enclosed_kitchen)" />
+
+		<hotspot name="Layout Plan (Enclosed Kitchen)1"
+         type="text"
+         ath="0.190" atv="-0.293" 
+         distorted="false"
+         html="[b]Layout Plan (Enclosed Kitchen)[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="0.190" atv="-0.29" distorted="false" zoom="false" linkedscene="scene_layout_plan_(enclosed_kitchen)" />
+
+	</scene>
+
+	<scene name="scene_Elevation_C_(Lift_Car)" title="Elevation C (Lift Car)" onstart="" thumburl="panos/Elevation_C_(Lift_Car).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Elevation_C_(Lift_Car).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.706967" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="6656" tiledimageheight="4706">
+				<cylinder url="panos/Elevation_C_(Lift_Car).tiles/l4/%0v/l4_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="3328" tiledimageheight="2352">
+				<cylinder url="panos/Elevation_C_(Lift_Car).tiles/l3/%0v/l3_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1664" tiledimageheight="1176">
+				<cylinder url="panos/Elevation_C_(Lift_Car).tiles/l2/%0v/l2_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="768" tiledimageheight="544">
+				<cylinder url="panos/Elevation_C_(Lift_Car).tiles/l1/%0v/l1_%0v_%0h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Layout Plan (Lift Car)1"
+         type="text"
+         ath="0.224" atv="-0.318" 
+         distorted="false"
+         html="[b]Layout Plan (Lift Car)[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="0.224" atv="-0.315" distorted="false" zoom="false" linkedscene="scene_layout_plan_and_rcp_(lift_car)" />
+
+	</scene>
+
+	<scene name="scene_Elevation_C__D__E___F_(T3A_Lift_Lobby)" title="Elevation C, D, E &amp; F (T3A Lift Lobby)" onstart="" thumburl="panos/Elevation_C__D__E___F_(T3A_Lift_Lobby).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Elevation_C__D__E___F_(T3A_Lift_Lobby).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.706967" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="6656" tiledimageheight="4706">
+				<cylinder url="panos/Elevation_C__D__E___F_(T3A_Lift_Lobby).tiles/l4/%0v/l4_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="3328" tiledimageheight="2352">
+				<cylinder url="panos/Elevation_C__D__E___F_(T3A_Lift_Lobby).tiles/l3/%0v/l3_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1664" tiledimageheight="1176">
+				<cylinder url="panos/Elevation_C__D__E___F_(T3A_Lift_Lobby).tiles/l2/%0v/l2_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="768" tiledimageheight="544">
+				<cylinder url="panos/Elevation_C__D__E___F_(T3A_Lift_Lobby).tiles/l1/%0v/l1_%0v_%0h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Layout Plan (T3A Lift Lobby)1"
+         type="text"
+         ath="0.357" atv="-0.34" 
+         distorted="false"
+         html="[b]Layout Plan (T3A Lift Lobby)[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="0.357" atv="-0.337" distorted="false" zoom="false" linkedscene="scene_layout_plan__(t3a_lift_lobby)" />
+
+	</scene>
+
+	<scene name="scene_Elevation_D_(Enclosed_Kitchen)" title="Elevation D (Enclosed Kitchen)" onstart="" thumburl="panos/Elevation_D_(Enclosed_Kitchen).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Elevation_D_(Enclosed_Kitchen).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.706967" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="6656" tiledimageheight="4706">
+				<cylinder url="panos/Elevation_D_(Enclosed_Kitchen).tiles/l4/%0v/l4_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="3328" tiledimageheight="2352">
+				<cylinder url="panos/Elevation_D_(Enclosed_Kitchen).tiles/l3/%0v/l3_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1664" tiledimageheight="1176">
+				<cylinder url="panos/Elevation_D_(Enclosed_Kitchen).tiles/l2/%0v/l2_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="768" tiledimageheight="544">
+				<cylinder url="panos/Elevation_D_(Enclosed_Kitchen).tiles/l1/%0v/l1_%0v_%0h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="BIM Elevation D (Enclosed Kitchen)"
+         type="text"
+         ath="-0.194" atv="-0.328" 
+         distorted="false"
+         html="[b]BIM Elevation D[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-0.194" atv="-0.325" distorted="false" zoom="false" linkedscene="scene_bim_elevation_d_(enclosed_kitchen)" />
+
+		<hotspot name="Layout Plan (Enclosed Kitchen)2"
+         type="text"
+         ath="0.149" atv="-0.328" 
+         distorted="false"
+         html="[b]Layout Plan (Enclosed Kitchen)[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="0.149" atv="-0.325" distorted="false" zoom="false" linkedscene="scene_layout_plan_(enclosed_kitchen)" />
+
+	</scene>
+
+	<scene name="scene_Elevation_E_(Bathroom_1)" title="Elevation E (Bathroom 1)" onstart="" thumburl="panos/Elevation_E_(Bathroom_1).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Elevation_E_(Bathroom_1).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.706967" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="6656" tiledimageheight="4706">
+				<cylinder url="panos/Elevation_E_(Bathroom_1).tiles/l4/%0v/l4_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="3328" tiledimageheight="2352">
+				<cylinder url="panos/Elevation_E_(Bathroom_1).tiles/l3/%0v/l3_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1664" tiledimageheight="1176">
+				<cylinder url="panos/Elevation_E_(Bathroom_1).tiles/l2/%0v/l2_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="768" tiledimageheight="544">
+				<cylinder url="panos/Elevation_E_(Bathroom_1).tiles/l1/%0v/l1_%0v_%0h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Layout Plan (Bathroom 1)2"
+         type="text"
+         ath="0.258" atv="-0.235" 
+         distorted="false"
+         html="[b]Layout Plan (Bathroom 1)[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="0.258" atv="-0.232" distorted="false" zoom="false" linkedscene="scene_layout_plan_and_rcp_(bathroom_1)" />
+
+	</scene>
+
+	<scene name="scene_Elevation_E_(Bathroom_2)" title="Elevation E (Bathroom 2)" onstart="" thumburl="panos/Elevation_E_(Bathroom_2).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Elevation_E_(Bathroom_2).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.706967" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="6656" tiledimageheight="4706">
+				<cylinder url="panos/Elevation_E_(Bathroom_2).tiles/l4/%0v/l4_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="3328" tiledimageheight="2352">
+				<cylinder url="panos/Elevation_E_(Bathroom_2).tiles/l3/%0v/l3_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1664" tiledimageheight="1176">
+				<cylinder url="panos/Elevation_E_(Bathroom_2).tiles/l2/%0v/l2_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="768" tiledimageheight="544">
+				<cylinder url="panos/Elevation_E_(Bathroom_2).tiles/l1/%0v/l1_%0v_%0h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Layout Plan (Bathroom 2)2"
+         type="text"
+         ath="0.149" atv="-0.283" 
+         distorted="false"
+         html="[b]Layout Plan (Bathroom 2)[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="0.149" atv="-0.280" distorted="false" zoom="false" linkedscene="scene_layout_plan_and_rcp_(bathroom_2)" />
+
+	</scene>
+
+	<scene name="scene_Enclosed_Kitchen_Location" title="Enclosed Kitchen Location" onstart="" thumburl="panos/Enclosed_Kitchen_Location.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Enclosed_Kitchen_Location.tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="1.414493" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="4672" tiledimageheight="6610">
+				<cylinder url="panos/Enclosed_Kitchen_Location.tiles/l4/%0v/l4_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="2304" tiledimageheight="3260">
+				<cylinder url="panos/Enclosed_Kitchen_Location.tiles/l3/%0v/l3_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1152" tiledimageheight="1630">
+				<cylinder url="panos/Enclosed_Kitchen_Location.tiles/l2/%0v/l2_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="640" tiledimageheight="906">
+				<cylinder url="panos/Enclosed_Kitchen_Location.tiles/l1/%0v/l1_%0v_%0h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Back to Mockup Floor Plan 1"
+         type="text"
+         ath="0.374" atv="0.162" 
+         distorted="false"
+         html="[b]Mockup Floor Plan[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="0.374" atv="0.165" distorted="false" zoom="false" linkedscene="scene_mockup_floor_plan" />
+
+	</scene>
+
+	<scene name="scene_Floor_Finish__(Enclosed_Kitchen)" title="Floor Finish  (Enclosed Kitchen)" onstart="" thumburl="panos/Floor_Finish__(Enclosed_Kitchen).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Floor_Finish__(Enclosed_Kitchen).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.706967" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="6656" tiledimageheight="4706">
+				<cylinder url="panos/Floor_Finish__(Enclosed_Kitchen).tiles/l4/%0v/l4_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="3328" tiledimageheight="2352">
+				<cylinder url="panos/Floor_Finish__(Enclosed_Kitchen).tiles/l3/%0v/l3_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1664" tiledimageheight="1176">
+				<cylinder url="panos/Floor_Finish__(Enclosed_Kitchen).tiles/l2/%0v/l2_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="768" tiledimageheight="544">
+				<cylinder url="panos/Floor_Finish__(Enclosed_Kitchen).tiles/l1/%0v/l1_%0v_%0h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Layout Plan (Enclosed Kitchen)3"
+         type="text"
+         ath="0.234" atv="-0.278" 
+         distorted="false"
+         html="[b]Layout Plan (Enclosed Kitchen)[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="0.234" atv="-0.275" distorted="false" zoom="false" linkedscene="scene_layout_plan_(enclosed_kitchen)" />
+
+	</scene>
+
+	<scene name="scene_Floor_Finish__(T3A_Lift_Lobby)" title="Floor Finish  (T3A Lift Lobby)" onstart="" thumburl="panos/Floor_Finish__(T3A_Lift_Lobby).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Floor_Finish__(T3A_Lift_Lobby).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.706967" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="6656" tiledimageheight="4706">
+				<cylinder url="panos/Floor_Finish__(T3A_Lift_Lobby).tiles/l4/%0v/l4_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="3328" tiledimageheight="2352">
+				<cylinder url="panos/Floor_Finish__(T3A_Lift_Lobby).tiles/l3/%0v/l3_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1664" tiledimageheight="1176">
+				<cylinder url="panos/Floor_Finish__(T3A_Lift_Lobby).tiles/l2/%0v/l2_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="768" tiledimageheight="544">
+				<cylinder url="panos/Floor_Finish__(T3A_Lift_Lobby).tiles/l1/%0v/l1_%0v_%0h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Layout Plan (T3A Lift Lobby)2"
+         type="text"
+         ath="0.248" atv="-0.243" 
+         distorted="false"
+         html="[b]Layout Plan (T3A Lift Lobby)[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="0.248" atv="-0.240" distorted="false" zoom="false" linkedscene="scene_layout_plan__(t3a_lift_lobby)" />
+
+	</scene>
+
+	<scene name="scene_Floor_Finish___Setting_Out_(Bathroom_1)" title="Floor Finish &amp; Setting Out (Bathroom 1)" onstart="" thumburl="panos/Floor_Finish___Setting_Out_(Bathroom_1).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Floor_Finish___Setting_Out_(Bathroom_1).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.706967" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="6656" tiledimageheight="4706">
+				<cylinder url="panos/Floor_Finish___Setting_Out_(Bathroom_1).tiles/l4/%0v/l4_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="3328" tiledimageheight="2352">
+				<cylinder url="panos/Floor_Finish___Setting_Out_(Bathroom_1).tiles/l3/%0v/l3_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1664" tiledimageheight="1176">
+				<cylinder url="panos/Floor_Finish___Setting_Out_(Bathroom_1).tiles/l2/%0v/l2_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="768" tiledimageheight="544">
+				<cylinder url="panos/Floor_Finish___Setting_Out_(Bathroom_1).tiles/l1/%0v/l1_%0v_%0h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Layout Plan (Bathroom 1)3"
+         type="text"
+         ath="0.394" atv="-0.263" 
+         distorted="false"
+         html="[b]Layout Plan (Bathroom 1)[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="0.394" atv="-0.260" distorted="false" zoom="false" linkedscene="scene_layout_plan_and_rcp_(bathroom_1)" />
+
+	</scene>
+
+	<scene name="scene_Floor_Finish___Setting_Out_(Bathroom_2)" title="Floor Finish &amp; Setting Out (Bathroom 2)" onstart="" thumburl="panos/Floor_Finish___Setting_Out_(Bathroom_2).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Floor_Finish___Setting_Out_(Bathroom_2).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.706967" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="6656" tiledimageheight="4706">
+				<cylinder url="panos/Floor_Finish___Setting_Out_(Bathroom_2).tiles/l4/%0v/l4_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="3328" tiledimageheight="2352">
+				<cylinder url="panos/Floor_Finish___Setting_Out_(Bathroom_2).tiles/l3/%0v/l3_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1664" tiledimageheight="1176">
+				<cylinder url="panos/Floor_Finish___Setting_Out_(Bathroom_2).tiles/l2/%0v/l2_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="768" tiledimageheight="544">
+				<cylinder url="panos/Floor_Finish___Setting_Out_(Bathroom_2).tiles/l1/%0v/l1_%0v_%0h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Layout Plan (Bathroom 2)3"
+         type="text"
+         ath="0.405" atv="-0.253" 
+         distorted="false"
+         html="[b]Layout Plan (Bathroom 2)[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="0.405" atv="-0.250" distorted="false" zoom="false" linkedscene="scene_layout_plan_and_rcp_(bathroom_2)" />
+
+	</scene>
+
+	<scene name="scene_Floor_Finish___Setting_Out_(Bathroom_3)" title="Floor Finish &amp; Setting Out (Bathroom 3)" onstart="" thumburl="panos/Floor_Finish___Setting_Out_(Bathroom_3).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Floor_Finish___Setting_Out_(Bathroom_3).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.706967" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="6656" tiledimageheight="4706">
+				<cylinder url="panos/Floor_Finish___Setting_Out_(Bathroom_3).tiles/l4/%0v/l4_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="3328" tiledimageheight="2352">
+				<cylinder url="panos/Floor_Finish___Setting_Out_(Bathroom_3).tiles/l3/%0v/l3_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1664" tiledimageheight="1176">
+				<cylinder url="panos/Floor_Finish___Setting_Out_(Bathroom_3).tiles/l2/%0v/l2_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="768" tiledimageheight="544">
+				<cylinder url="panos/Floor_Finish___Setting_Out_(Bathroom_3).tiles/l1/%0v/l1_%0v_%0h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Layout Plan (Bathroom 3)3"
+         type="text"
+         ath="0.408" atv="-0.268" 
+         distorted="false"
+         html="[b]Layout Plan (Bathroom 3)[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="0.408" atv="-0.265" distorted="false" zoom="false" linkedscene="scene_layout_plan_and_rcp_(bathroom_3)" />
+
+	</scene>
+
+	<scene name="scene_Floor_Finish___Setting_Out_(T3B_Lift_Lobby)" title="Floor Finish &amp; Setting Out (T3B Lift Lobby)" onstart="" thumburl="panos/Floor_Finish___Setting_Out_(T3B_Lift_Lobby).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Floor_Finish___Setting_Out_(T3B_Lift_Lobby).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.706967" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="6656" tiledimageheight="4706">
+				<cylinder url="panos/Floor_Finish___Setting_Out_(T3B_Lift_Lobby).tiles/l4/%0v/l4_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="3328" tiledimageheight="2352">
+				<cylinder url="panos/Floor_Finish___Setting_Out_(T3B_Lift_Lobby).tiles/l3/%0v/l3_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1664" tiledimageheight="1176">
+				<cylinder url="panos/Floor_Finish___Setting_Out_(T3B_Lift_Lobby).tiles/l2/%0v/l2_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="768" tiledimageheight="544">
+				<cylinder url="panos/Floor_Finish___Setting_Out_(T3B_Lift_Lobby).tiles/l1/%0v/l1_%0v_%0h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Layout Plan (T3B Lift Lobby)1"
+         type="text"
+         ath="0.367" atv="-0.273" 
+         distorted="false"
+         html="[b]Layout Plan (T3B Lift Lobby)[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="0.367" atv="-0.270" distorted="false" zoom="false" linkedscene="scene_layout_plan_and_rcp_(t3b_lift_lobby)" />
+
+	</scene>
+
+	<scene name="scene_Floor_Finish_(Lift_Car)" title="Floor Finish (Lift Car)" onstart="" thumburl="panos/Floor_Finish_(Lift_Car).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Floor_Finish_(Lift_Car).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.706967" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="6656" tiledimageheight="4706">
+				<cylinder url="panos/Floor_Finish_(Lift_Car).tiles/l4/%0v/l4_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="3328" tiledimageheight="2352">
+				<cylinder url="panos/Floor_Finish_(Lift_Car).tiles/l3/%0v/l3_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1664" tiledimageheight="1176">
+				<cylinder url="panos/Floor_Finish_(Lift_Car).tiles/l2/%0v/l2_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="768" tiledimageheight="544">
+				<cylinder url="panos/Floor_Finish_(Lift_Car).tiles/l1/%0v/l1_%0v_%0h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Layout Plan (Lift Car)2"
+         type="text"
+         ath="0.155" atv="-0.203" 
+         distorted="false"
+         html="[b]Layout Plan (Lift Car)[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="0.155" atv="-0.200" distorted="false" zoom="false" linkedscene="scene_layout_plan_and_rcp_(lift_car)" />
+
+	</scene>
+
+	<scene name="scene_Layout_Plan__(T3A_Lift_Lobby)" title="Layout Plan  (T3A Lift Lobby)" onstart="" thumburl="panos/Layout_Plan__(T3A_Lift_Lobby).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Layout_Plan__(T3A_Lift_Lobby).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.706967" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="6656" tiledimageheight="4706">
+				<cylinder url="panos/Layout_Plan__(T3A_Lift_Lobby).tiles/l4/%0v/l4_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="3328" tiledimageheight="2352">
+				<cylinder url="panos/Layout_Plan__(T3A_Lift_Lobby).tiles/l3/%0v/l3_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1664" tiledimageheight="1176">
+				<cylinder url="panos/Layout_Plan__(T3A_Lift_Lobby).tiles/l2/%0v/l2_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="768" tiledimageheight="544">
+				<cylinder url="panos/Layout_Plan__(T3A_Lift_Lobby).tiles/l1/%0v/l1_%0v_%0h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="RCP (T3A Lift Lobby)"
+         type="text"
+         ath="-0.305" atv="-0.278" 
+         distorted="false"
+         html="[b]RCP[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-0.305" atv="-0.275" distorted="false" zoom="false" linkedscene="scene_rcp_(t3a_lift_lobby)" />
+
+		<hotspot name="Setting Out (T3A Lift Lobby)"
+         type="text"
+         ath="-0.25" atv="-0.278" 
+         distorted="false"
+         html="[b]Setting Out[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-0.25" atv="-0.275" distorted="false" zoom="false" linkedscene="scene_setting_out_(t3a_lift_lobby)" />
+
+		<hotspot name="Floor Finish (T3A Lift Lobby)"
+         type="text"
+         ath="-0.185" atv="-0.278" 
+         distorted="false"
+         html="[b]Floor Finish[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="-0.185" atv="-0.275" distorted="false" zoom="false" linkedscene="scene_floor_finish__(t3a_lift_lobby)" />
+
+		<hotspot name="Elevation C, D, E, &amp; F (T3A Lift Lobby)"
+         type="text"
+         ath="-0.03" atv="-0.278" 
+         distorted="false"
+         html="[b]Elevation C, D, E, &amp; F[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="-0.03" atv="-0.275" distorted="false" zoom="false" linkedscene="scene_elevation_c__d__e___f_(t3a_lift_lobby)" />
+
+		<hotspot name="Back to Mockup Floor Plan 2"
+         type="text"
+         ath="0.273" atv="-0.278" 
+         distorted="false"
+         html="[b]Mockup Floor Plan[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot5" style="skin_hotspotstyle" ath="0.273" atv="-0.275" distorted="false" zoom="false" linkedscene="scene_mockup_floor_plan" />
+
+		<hotspot name="Elevation A &amp; B (T3A Lift Lobby)"
+         type="text"
+         ath="-0.12" atv="-0.278" 
+         distorted="false"
+         html="[b]Elevation A &amp; B[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot6" style="skin_hotspotstyle" ath="-0.12" atv="-0.275" distorted="false" zoom="false" linkedscene="scene_elevation_a___b_(t3a_lift_lobby)" />
+
+		<hotspot name="BIM Elevation (T3A Lift Lobby)"
+         type="text"
+         ath="-0.305" atv="-0.213" 
+         distorted="false"
+         html="[b]BIM Elevation[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot7" style="skin_hotspotstyle" ath="-0.305" atv="-0.210" distorted="false" zoom="false" linkedscene="scene_bim_elevationt3a_lift_lobby" />
+
+	</scene>
+
+	<scene name="scene_Layout_Plan_(Enclosed_Kitchen)" title="Layout Plan (Enclosed Kitchen)" onstart="" thumburl="panos/Layout_Plan_(Enclosed_Kitchen).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Layout_Plan_(Enclosed_Kitchen).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.706967" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="6656" tiledimageheight="4706">
+				<cylinder url="panos/Layout_Plan_(Enclosed_Kitchen).tiles/l4/%0v/l4_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="3328" tiledimageheight="2352">
+				<cylinder url="panos/Layout_Plan_(Enclosed_Kitchen).tiles/l3/%0v/l3_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1664" tiledimageheight="1176">
+				<cylinder url="panos/Layout_Plan_(Enclosed_Kitchen).tiles/l2/%0v/l2_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="768" tiledimageheight="544">
+				<cylinder url="panos/Layout_Plan_(Enclosed_Kitchen).tiles/l1/%0v/l1_%0v_%0h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="RCP (Enclosed Kitchen)"
+         type="text"
+         ath="-0.373" atv="-0.268" 
+         distorted="false"
+         html="[b]RCP[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-0.373" atv="-0.265" distorted="false" zoom="false" linkedscene="scene_rcp_(enclosed_kitchen)" />
+
+		<hotspot name="Setting Out (Enclosed Kitchen)"
+         type="text"
+         ath="-0.283" atv="-0.268" 
+         distorted="false"
+         html="[b]Setting Out[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-0.283" atv="-0.265" distorted="false" zoom="false" linkedscene="scene_setting_out_(enclosed_kitchen)" />
+
+		<hotspot name="Floor Finish (Enclosed Kitchen)"
+         type="text"
+         ath="-0.200" atv="-0.268" 
+         distorted="false"
+         html="[b]Floor Finish[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="-0.200" atv="-0.265" distorted="false" zoom="false" linkedscene="scene_floor_finish__(enclosed_kitchen)" />
+
+		<hotspot name="Elevation A &amp; B (Enclosed Kitchen)"
+         type="text"
+         ath="-0.114" atv="-0.268" 
+         distorted="false"
+         html="[b]Elevation A &amp; B[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="-0.114" atv="-0.265" distorted="false" zoom="false" linkedscene="scene_elevation_a___b_(enclosed_kitchen)" />
+
+		<hotspot name="Elevation C (Enclosed Kitchen)"
+         type="text"
+         ath="-0.024" atv="-0.268" 
+         distorted="false"
+         html="[b]Elevation C[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot5" style="skin_hotspotstyle" ath="-0.024" atv="-0.265" distorted="false" zoom="false" linkedscene="scene_elevation_c_(enclosed_kitchen)" />
+
+		<hotspot name="Elevation D (Enclosed Kitchen)"
+         type="text"
+         ath="0.065" atv="-0.268" 
+         distorted="false"
+         html="[b]Elevation D[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot6" style="skin_hotspotstyle" ath="0.065" atv="-0.265" distorted="false" zoom="false" linkedscene="scene_elevation_d_(enclosed_kitchen)" />
+
+		<hotspot name="Back to Mockup Floor Plan 3"
+         type="text"
+         ath="0.330" atv="-0.268" 
+         distorted="false"
+         html="[b]Mockup Floor Plan[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot7" style="skin_hotspotstyle" ath="0.330" atv="-0.265" distorted="false" zoom="false" linkedscene="scene_mockup_floor_plan" />
+
+	</scene>
+
+	<scene name="scene_Layout_Plan_and_RCP_(Bathroom_1)" title="Layout Plan and RCP (Bathroom 1)" onstart="" thumburl="panos/Layout_Plan_and_RCP_(Bathroom_1).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Layout_Plan_and_RCP_(Bathroom_1).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.706967" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="6656" tiledimageheight="4706">
+				<cylinder url="panos/Layout_Plan_and_RCP_(Bathroom_1).tiles/l4/%0v/l4_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="3328" tiledimageheight="2352">
+				<cylinder url="panos/Layout_Plan_and_RCP_(Bathroom_1).tiles/l3/%0v/l3_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1664" tiledimageheight="1176">
+				<cylinder url="panos/Layout_Plan_and_RCP_(Bathroom_1).tiles/l2/%0v/l2_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="768" tiledimageheight="544">
+				<cylinder url="panos/Layout_Plan_and_RCP_(Bathroom_1).tiles/l1/%0v/l1_%0v_%0h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Floor Finish &amp; Setting Out (Bathroom 1)"
+         type="text"
+         ath="-0.370" atv="-0.287" 
+         distorted="false"
+         html="[b]Floor Finish &amp; [br] Setting Out[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-0.370" atv="-0.280" distorted="false" zoom="false" linkedscene="scene_floor_finish___setting_out_(bathroom_1)" />
+
+		<hotspot name="Elevation A &amp; B (Bathroom 1)"
+         type="text"
+         ath="-0.292" atv="-0.283" 
+         distorted="false"
+         html="[b]Elevation A &amp; B[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-0.292" atv="-0.280" distorted="false" zoom="false" linkedscene="scene_elevation_a___b_(bathroom_1)" />
+
+		<hotspot name="Elevation C &amp; D (Bathroom 1)"
+         type="text"
+         ath="-0.220" atv="-0.283" 
+         distorted="false"
+         html="[b]Elevation C &amp; D[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="-0.220" atv="-0.280" distorted="false" zoom="false" linkedscene="scene_elevation_c___d_(bathroom_1)" />
+
+		<hotspot name="Elevation E (Bathroom 1)"
+         type="text"
+         ath="-0.144" atv="-0.283" 
+         distorted="false"
+         html="[b]Elevation E[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="-0.144" atv="-0.280" distorted="false" zoom="false" linkedscene="scene_elevation_e_(bathroom_1)" />
+
+		<hotspot name="Back to Mockup Floor Plan 4"
+         type="text"
+         ath="0.406" atv="-0.283" 
+         distorted="false"
+         html="[b]Mockup Floor Plan[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot5" style="skin_hotspotstyle" ath="0.406" atv="-0.280" distorted="false" zoom="false" linkedscene="scene_mockup_floor_plan" />
+
+	</scene>
+
+	<scene name="scene_Layout_Plan_and_RCP_(Bathroom_2)" title="Layout Plan and RCP (Bathroom 2)" onstart="" thumburl="panos/Layout_Plan_and_RCP_(Bathroom_2).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Layout_Plan_and_RCP_(Bathroom_2).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.706967" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="6656" tiledimageheight="4706">
+				<cylinder url="panos/Layout_Plan_and_RCP_(Bathroom_2).tiles/l4/%0v/l4_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="3328" tiledimageheight="2352">
+				<cylinder url="panos/Layout_Plan_and_RCP_(Bathroom_2).tiles/l3/%0v/l3_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1664" tiledimageheight="1176">
+				<cylinder url="panos/Layout_Plan_and_RCP_(Bathroom_2).tiles/l2/%0v/l2_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="768" tiledimageheight="544">
+				<cylinder url="panos/Layout_Plan_and_RCP_(Bathroom_2).tiles/l1/%0v/l1_%0v_%0h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Floor Finish &amp; Setting Out (Bathroom 2)"
+         type="text"
+         ath="-0.378" atv="-0.273" 
+         distorted="false"
+         html="[b]Floor Finish &amp; Setting Out[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-0.378" atv="-0.270" distorted="false" zoom="false" linkedscene="scene_floor_finish___setting_out_(bathroom_2)" />
+
+		<hotspot name="Elevation A &amp; B (Bathroom 2)"
+         type="text"
+         ath="-0.285" atv="-0.273" 
+         distorted="false"
+         html="[b]Elevation A &amp; B[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-0.285" atv="-0.270" distorted="false" zoom="false" linkedscene="scene_elevation_a___b_(bathroom_2)" />
+
+		<hotspot name="Elevation C &amp; D (Bathroom 2)"
+         type="text"
+         ath="-0.2" atv="-0.273" 
+         distorted="false"
+         html="[b]Elevation C &amp; D[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="-0.2" atv="-0.270" distorted="false" zoom="false" linkedscene="scene_elevation_c___d_(bathroom_2)" />
+
+		<hotspot name="Elevation E (Bathroom 2)"
+         type="text"
+         ath="-0.120" atv="-0.273" 
+         distorted="false"
+         html="[b]Elevation E[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="-0.120" atv="-0.270" distorted="false" zoom="false" linkedscene="scene_elevation_e_(bathroom_2)" />
+
+		<hotspot name="Back to Mockup Floor Plan 5"
+         type="text"
+         ath="0.396" atv="-0.273" 
+         distorted="false"
+         html="[b]Mockup Floor Plan[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot5" style="skin_hotspotstyle" ath="0.396" atv="-0.270" distorted="false" zoom="false" linkedscene="scene_mockup_floor_plan" />
+
+	</scene>
+
+	<scene name="scene_Layout_Plan_and_RCP_(Bathroom_3)" title="Layout Plan and RCP (Bathroom 3)" onstart="" thumburl="panos/Layout_Plan_and_RCP_(Bathroom_3).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Layout_Plan_and_RCP_(Bathroom_3).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.706967" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="6656" tiledimageheight="4706">
+				<cylinder url="panos/Layout_Plan_and_RCP_(Bathroom_3).tiles/l4/%0v/l4_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="3328" tiledimageheight="2352">
+				<cylinder url="panos/Layout_Plan_and_RCP_(Bathroom_3).tiles/l3/%0v/l3_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1664" tiledimageheight="1176">
+				<cylinder url="panos/Layout_Plan_and_RCP_(Bathroom_3).tiles/l2/%0v/l2_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="768" tiledimageheight="544">
+				<cylinder url="panos/Layout_Plan_and_RCP_(Bathroom_3).tiles/l1/%0v/l1_%0v_%0h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Floor Finish &amp; Setting Out (Bathroom 3)"
+         type="text"
+         ath="-0.377" atv="-0.297" 
+         distorted="false"
+         html="[b]Floor Finish &amp; [br] Setting Out[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-0.377" atv="-0.290" distorted="false" zoom="false" linkedscene="scene_floor_finish___setting_out_(bathroom_3)" />
+
+		<hotspot name="Elevation A &amp; B (Bathroom 3)"
+         type="text"
+         ath="-0.293" atv="-0.293" 
+         distorted="false"
+         html="[b]Elevation A &amp; B[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-0.293" atv="-0.290" distorted="false" zoom="false" linkedscene="scene_elevation_a___b_(bathroom_3)" />
+
+		<hotspot name="Elevation C &amp; D (Bathroom 3)"
+         type="text"
+         ath="-0.208" atv="-0.293" 
+         distorted="false"
+         html="[b]Elevation C &amp; D[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="-0.208" atv="-0.290" distorted="false" zoom="false" linkedscene="scene_elevation_c___d_(bathroom_3)" />
+
+		<hotspot name="Back to Mockup Floor Plan 6"
+         type="text"
+         ath="0.407" atv="-0.293" 
+         distorted="false"
+         html="[b]Mockup Floor Plan[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="0.407" atv="-0.290" distorted="false" zoom="false" linkedscene="scene_mockup_floor_plan" />
+
+	</scene>
+
+	<scene name="scene_Layout_Plan_and_RCP_(Lift_Car)" title="Layout Plan and RCP (Lift Car)" onstart="" thumburl="panos/Layout_Plan_and_RCP_(Lift_Car).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Layout_Plan_and_RCP_(Lift_Car).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.706967" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="6656" tiledimageheight="4706">
+				<cylinder url="panos/Layout_Plan_and_RCP_(Lift_Car).tiles/l4/%0v/l4_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="3328" tiledimageheight="2352">
+				<cylinder url="panos/Layout_Plan_and_RCP_(Lift_Car).tiles/l3/%0v/l3_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1664" tiledimageheight="1176">
+				<cylinder url="panos/Layout_Plan_and_RCP_(Lift_Car).tiles/l2/%0v/l2_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="768" tiledimageheight="544">
+				<cylinder url="panos/Layout_Plan_and_RCP_(Lift_Car).tiles/l1/%0v/l1_%0v_%0h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Floor Finish (Lift Car)"
+         type="text"
+         ath="-0.350" atv="-0.208" 
+         distorted="false"
+         html="[b]Floor Finish[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-0.350" atv="-0.205" distorted="false" zoom="false" linkedscene="scene_floor_finish_(lift_car)" />
+
+		<hotspot name="Elevation A &amp; B (Lift Car)"
+         type="text"
+         ath="-0.225" atv="-0.208" 
+         distorted="false"
+         html="[b]Elevation A &amp; B[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-0.225" atv="-0.205" distorted="false" zoom="false" linkedscene="scene_elevation_a___b_(lift_car)" />
+
+		<hotspot name="Elevation C (Lift Car)"
+         type="text"
+         ath="-0.103" atv="-0.208" 
+         distorted="false"
+         html="[b]Elevation C[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="-0.103" atv="-0.205" distorted="false" zoom="false" linkedscene="scene_elevation_c_(lift_car)" />
+
+		<hotspot name="Back to Mockup Floor Plan 7"
+         type="text"
+         ath="0.341" atv="-0.208" 
+         distorted="false"
+         html="[b]Mockup Floor Plan[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="0.341" atv="-0.205" distorted="false" zoom="false" linkedscene="scene_mockup_floor_plan" />
+
+	</scene>
+
+	<scene name="scene_Layout_Plan_and_RCP_(T3B_Lift_Lobby)" title="Layout Plan and RCP (T3B Lift Lobby)" onstart="" thumburl="panos/Layout_Plan_and_RCP_(T3B_Lift_Lobby).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Layout_Plan_and_RCP_(T3B_Lift_Lobby).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.706967" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="6656" tiledimageheight="4706">
+				<cylinder url="panos/Layout_Plan_and_RCP_(T3B_Lift_Lobby).tiles/l4/%0v/l4_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="3328" tiledimageheight="2352">
+				<cylinder url="panos/Layout_Plan_and_RCP_(T3B_Lift_Lobby).tiles/l3/%0v/l3_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1664" tiledimageheight="1176">
+				<cylinder url="panos/Layout_Plan_and_RCP_(T3B_Lift_Lobby).tiles/l2/%0v/l2_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="768" tiledimageheight="544">
+				<cylinder url="panos/Layout_Plan_and_RCP_(T3B_Lift_Lobby).tiles/l1/%0v/l1_%0v_%0h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Floor Finish &amp; Setting out(T3B Lift Lobby)"
+         type="text"
+         ath="-0.369" atv="-0.277" 
+         distorted="false"
+         html="[b]Floor Finish &amp; [br] Setting out [b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-0.369" atv="-0.270" distorted="false" zoom="false" linkedscene="scene_floor_finish___setting_out_(t3b_lift_lobby)" />
+
+		<hotspot name="Elevation A, B, C &amp; D (T3B Lift Lobby)"
+         type="text"
+         ath="-0.268" atv="-0.273" 
+         distorted="false"
+         html="[b]Elevation A, B, C &amp; D[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-0.268" atv="-0.270" distorted="false" zoom="false" linkedscene="scene_elevation_a__b__c___d_(t3b_lift_lobby)" />
+
+		<hotspot name="BIM Elevation (T3B Lift Lobby)"
+         type="text"
+         ath="-0.175" atv="-0.273" 
+         distorted="false"
+         html="[b]BIM Elevation[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="-0.175" atv="-0.270" distorted="false" zoom="false" linkedscene="scene_bim_elevationt3b_lift_lobby" />
+
+		<hotspot name="Back to Mockup Floor Plan 8"
+         type="text"
+         ath="0.345" atv="-0.273" 
+         distorted="false"
+         html="[b]Mockup Floor Plan[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="0.345" atv="-0.270" distorted="false" zoom="false" linkedscene="scene_mockup_floor_plan" />
+
+	</scene>
+
+	
+
+	<scene name="scene_RCP_(Enclosed_Kitchen)" title="RCP (Enclosed Kitchen)" onstart="" thumburl="panos/RCP_(Enclosed_Kitchen).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/RCP_(Enclosed_Kitchen).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.706967" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="6656" tiledimageheight="4706">
+				<cylinder url="panos/RCP_(Enclosed_Kitchen).tiles/l4/%0v/l4_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="3328" tiledimageheight="2352">
+				<cylinder url="panos/RCP_(Enclosed_Kitchen).tiles/l3/%0v/l3_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1664" tiledimageheight="1176">
+				<cylinder url="panos/RCP_(Enclosed_Kitchen).tiles/l2/%0v/l2_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="768" tiledimageheight="544">
+				<cylinder url="panos/RCP_(Enclosed_Kitchen).tiles/l1/%0v/l1_%0v_%0h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Layout Plan (Enclosed Kitchen)4"
+         type="text"
+         ath="0.229" atv="-0.268" 
+         distorted="false"
+         html="[b]Layout Plan (Enclosed Kitchen)[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="0.229" atv="-0.265" distorted="false" zoom="false" linkedscene="scene_layout_plan_(enclosed_kitchen)" />
+
+	</scene>
+
+	<scene name="scene_RCP_(T3A_Lift_Lobby)" title="RCP (T3A Lift Lobby)" onstart="" thumburl="panos/RCP_(T3A_Lift_Lobby).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/RCP_(T3A_Lift_Lobby).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.706967" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="6656" tiledimageheight="4706">
+				<cylinder url="panos/RCP_(T3A_Lift_Lobby).tiles/l4/%0v/l4_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="3328" tiledimageheight="2352">
+				<cylinder url="panos/RCP_(T3A_Lift_Lobby).tiles/l3/%0v/l3_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1664" tiledimageheight="1176">
+				<cylinder url="panos/RCP_(T3A_Lift_Lobby).tiles/l2/%0v/l2_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="768" tiledimageheight="544">
+				<cylinder url="panos/RCP_(T3A_Lift_Lobby).tiles/l1/%0v/l1_%0v_%0h.jpg" />
+			</level>
+		</image>
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="0.287" atv="-0.266" distorted="false" zoom="false" linkedscene="scene_layout_plan__(t3a_lift_lobby)" />
+
+	</scene>
+
+	<scene name="scene_Setting_Out_(Enclosed_Kitchen)" title="Setting Out (Enclosed Kitchen)" onstart="" thumburl="panos/Setting_Out_(Enclosed_Kitchen).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Setting_Out_(Enclosed_Kitchen).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.706967" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="6656" tiledimageheight="4706">
+				<cylinder url="panos/Setting_Out_(Enclosed_Kitchen).tiles/l4/%0v/l4_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="3328" tiledimageheight="2352">
+				<cylinder url="panos/Setting_Out_(Enclosed_Kitchen).tiles/l3/%0v/l3_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1664" tiledimageheight="1176">
+				<cylinder url="panos/Setting_Out_(Enclosed_Kitchen).tiles/l2/%0v/l2_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="768" tiledimageheight="544">
+				<cylinder url="panos/Setting_Out_(Enclosed_Kitchen).tiles/l1/%0v/l1_%0v_%0h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Layout Plan (Enclosed Kitchen)4"
+         type="text"
+         ath="0.211" atv="-0.263" 
+         distorted="false"
+         html="[b]Layout Plan (Enclosed Kitchen)[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="0.211" atv="-0.260" distorted="false" zoom="false" linkedscene="scene_layout_plan_(enclosed_kitchen)" />
+
+	</scene>
+
+	<scene name="scene_Setting_Out_(T3A_Lift_Lobby)" title="Setting Out (T3A Lift Lobby)" onstart="" thumburl="panos/Setting_Out_(T3A_Lift_Lobby).tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Setting_Out_(T3A_Lift_Lobby).tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="1.00" vfov="0.706967" voffset="0.00" multires="true" tilesize="512">
+			<level tiledimagewidth="6656" tiledimageheight="4706">
+				<cylinder url="panos/Setting_Out_(T3A_Lift_Lobby).tiles/l4/%0v/l4_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="3328" tiledimageheight="2352">
+				<cylinder url="panos/Setting_Out_(T3A_Lift_Lobby).tiles/l3/%0v/l3_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1664" tiledimageheight="1176">
+				<cylinder url="panos/Setting_Out_(T3A_Lift_Lobby).tiles/l2/%0v/l2_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="768" tiledimageheight="544">
+				<cylinder url="panos/Setting_Out_(T3A_Lift_Lobby).tiles/l1/%0v/l1_%0v_%0h.jpg" />
+			</level>
+		</image>
+
+		<hotspot name="Layout Plan (T3A Lift Lobby)3"
+         type="text"
+         ath="0.261" atv="-0.296" 
+         distorted="false"
+         html="[b]Layout Plan (T3A Lift Lobby)[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="0.261" atv="-0.293" distorted="false" zoom="false" linkedscene="scene_layout_plan__(t3a_lift_lobby)" />
+
+	</scene>
+
+
+</krpano>
