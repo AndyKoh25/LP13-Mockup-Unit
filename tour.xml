@@ -189,33 +189,10 @@
          />
 		<hotspot name="spot4" style="skin_hotspotstyle" ath="0.163" atv="-0.008" distorted="false" zoom="false" linkedscene="scene_2_bedrooms_location" />
 		
-		<hotspot name="Location in T3 floor plan1"
-         type="text"
-         ath="0.09" atv="-0.015" 
-         distorted="false"
-         html="[b]Location in T3 [br] Floor Plan[b]"
-         css="font-family:Arial; font-size:16px; color:#000000;"
-         vcenter="false"
-         padding="2"
-         wordwrap="true"
-         selectable="false"
-         bg="false"
-         bgcolor="0xFFFFFF"
-         bgalpha="1.0"
-         bgborder="0"
-         bgroundedge="0"
-         bgshadow=""
-         txtshadow=""
-         mergedalpha="true"
-         oversampling="1.0"
-         mipmapping="false"
-         onautosized=""
-         />
-		<hotspot name="spot5" style="skin_hotspotstyle" ath="0.09" atv="-0.008" distorted="false" zoom="false" linkedscene="scene_bathroom_1_location" />
 
 		<hotspot name="Bathroom 1"
          type="text"
-         ath="0.04" atv="-0.015" 
+         ath="0.06" atv="-0.015" 
          distorted="false"
          html="[b]Bathroom 1[b]"
          css="font-family:Arial; font-size:16px; color:#000000;"
@@ -235,11 +212,11 @@
          mipmapping="false"
          onautosized=""
          />
-		<hotspot name="spot6" style="skin_hotspotstyle" ath="0.04" atv="-0.008" distorted="false" zoom="false" linkedscene="scene_layout_plan_and_rcp_(bathroom_1)" />
+		<hotspot name="spot6" style="skin_hotspotstyle" ath="0.06" atv="-0.008" distorted="false" zoom="false" linkedscene="scene_layout_plan_and_rcp_(bathroom_1)" />
 
 		<hotspot name="Location in T3 floor plan2"
          type="text"
-         ath="-0.051" atv="0.04" 
+         ath="-0.051" atv="-0.006" 
          distorted="false"
          html="[b]Location in T3 [br] Floor Plan[b]"
          css="font-family:Arial; font-size:16px; color:#000000;"
@@ -259,31 +236,8 @@
          mipmapping="false"
          onautosized=""
          />
-		<hotspot name="spot7" style="skin_hotspotstyle" ath="-0.051" atv="0.05" distorted="false" zoom="false" linkedscene="scene_enclosed_kitchen_location" />
+		<hotspot name="spot7" style="skin_hotspotstyle" ath="-0.051" atv="0.00" distorted="false" zoom="false" linkedscene="scene_enclosed_kitchen_location" />
 
-		<hotspot name="Enclosed Kitchen"
-         type="text"
-         ath="-0.051" atv="-0.006" 
-         distorted="false"
-         html="[b]Enclosed Kitchen[b]"
-         css="font-family:Arial; font-size:16px; color:#000000;"
-         vcenter="false"
-         padding="2"
-         wordwrap="true"
-         selectable="false"
-         bg="false"
-         bgcolor="0xFFFFFF"
-         bgalpha="1.0"
-         bgborder="0"
-         bgroundedge="0"
-         bgshadow=""
-         txtshadow=""
-         mergedalpha="true"
-         oversampling="1.0"
-         mipmapping="false"
-         onautosized=""
-         />
-		<hotspot name="spot8" style="skin_hotspotstyle" ath="-0.051" atv="-0.000" distorted="false" zoom="false" linkedscene="scene_layout_plan_(enclosed_kitchen)" />
 
 		<hotspot name="Location in T3 floor plan3"
          type="text"
@@ -430,52 +384,7 @@
 
 	</scene>
 
-	<scene name="scene_Bathroom_1_Location" title="Bathroom 1 Location" onstart="" thumburl="panos/Bathroom_1_Location.tiles/thumb.jpg" lat="" lng="" heading="">
 
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
-
-		<preview url="panos/Bathroom_1_Location.tiles/preview.jpg" />
-
-		<image type="CYLINDER" hfov="1.00" vfov="1.414493" voffset="0.00" multires="true" tilesize="512">
-			<level tiledimagewidth="4672" tiledimageheight="6610">
-				<cylinder url="panos/Bathroom_1_Location.tiles/l4/%0v/l4_%0v_%0h.jpg" />
-			</level>
-			<level tiledimagewidth="2304" tiledimageheight="3260">
-				<cylinder url="panos/Bathroom_1_Location.tiles/l3/%0v/l3_%0v_%0h.jpg" />
-			</level>
-			<level tiledimagewidth="1152" tiledimageheight="1630">
-				<cylinder url="panos/Bathroom_1_Location.tiles/l2/%0v/l2_%0v_%0h.jpg" />
-			</level>
-			<level tiledimagewidth="640" tiledimageheight="906">
-				<cylinder url="panos/Bathroom_1_Location.tiles/l1/%0v/l1_%0v_%0h.jpg" />
-			</level>
-		</image>
-
-		<hotspot name="Back to Mockup Floor Plan"
-         type="text"
-         ath="0.355" atv="0.017" 
-         distorted="false"
-         html="[b]Mockup Floor Plan[b]"
-         css="font-family:Arial; font-size:16px; color:#000000;"
-         vcenter="false"
-         padding="2"
-         wordwrap="true"
-         selectable="false"
-         bg="false"
-         bgcolor="0xFFFFFF"
-         bgalpha="1.0"
-         bgborder="0"
-         bgroundedge="0"
-         bgshadow=""
-         txtshadow=""
-         mergedalpha="true"
-         oversampling="1.0"
-         mipmapping="false"
-         onautosized=""
-         />
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="0.355" atv="0.02" distorted="false" zoom="false" linkedscene="scene_mockup_floor_plan" />
-
-	</scene>
 
 	<scene name="scene_Bathroom_2_Location" title="Bathroom 2 Location" onstart="" thumburl="panos/Bathroom_2_Location.tiles/thumb.jpg" lat="" lng="" heading="">
 
@@ -2465,6 +2374,30 @@
 				<cylinder url="panos/Enclosed_Kitchen_Location.tiles/l1/%0v/l1_%0v_%0h.jpg" />
 			</level>
 		</image>
+
+        <hotspot name="Enclosed Kitchen"
+         type="text"
+         ath="0.3" atv="0.162" 
+         distorted="false"
+         html="[b]Enclosed Kitchen[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+        <hotspot name="spot2" style="skin_hotspotstyle" ath="0.3" atv="0.165" distorted="false" zoom="false" linkedscene="scene_layout_plan_(enclosed_kitchen)" />
 
 		<hotspot name="Back to Mockup Floor Plan 1"
          type="text"
