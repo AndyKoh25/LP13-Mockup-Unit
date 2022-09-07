@@ -169,7 +169,7 @@
          type="text"
          ath="0.163" atv="-0.015" 
          distorted="false"
-         html="[b]Location in T3 [br] Floor Plan[b]"
+         html="[b]Flat Location in [br] T3 Floor Plan[b]"
          css="font-family:Arial; font-size:16px; color:#000000;"
          vcenter="false"
          padding="2"
@@ -214,11 +214,11 @@
          />
 		<hotspot name="spot6" style="skin_hotspotstyle" ath="0.06" atv="-0.008" distorted="false" zoom="false" linkedscene="scene_layout_plan_and_rcp_(bathroom_1)" />
 
-		<hotspot name="Location in T3 floor plan2"
+		<hotspot name="Enclosed Kitchen Location in T3 floor plan"
          type="text"
          ath="-0.051" atv="-0.006" 
          distorted="false"
-         html="[b]Location in T3 [br] Floor Plan[b]"
+         html="[b]Kitchen Location in [br] T3 Floor Plan[b]"
          css="font-family:Arial; font-size:16px; color:#000000;"
          vcenter="false"
          padding="2"
@@ -239,11 +239,11 @@
 		<hotspot name="spot7" style="skin_hotspotstyle" ath="-0.051" atv="0.00" distorted="false" zoom="false" linkedscene="scene_enclosed_kitchen_location" />
 
 
-		<hotspot name="Location in T3 floor plan3"
+		<hotspot name="Bathroom 3 Location in T3 floor plan"
          type="text"
-         ath="-0.240" atv="0.083" 
+         ath="-0.265" atv="0.083" 
          distorted="false"
-         html="[b]Location in T3 [br] Floor Plan[b]"
+         html="[b]Bathroom 3 Location [br] in T3 Floor Plan[b]"
          css="font-family:Arial; font-size:16px; color:#000000;"
          vcenter="false"
          padding="2"
@@ -261,13 +261,13 @@
          mipmapping="false"
          onautosized=""
          />
-		<hotspot name="spot9" style="skin_hotspotstyle" ath="-0.240" atv="0.090" distorted="false" zoom="false" linkedscene="scene_bathroom_3_location" />
+		<hotspot name="spot9" style="skin_hotspotstyle" ath="-0.265" atv="0.090" distorted="false" zoom="false" linkedscene="scene_bathroom_3_location" />
 
-		<hotspot name="Location in T3 floor plan4"
+		<hotspot name="Bathroom 2 Location in T3 floor plan"
          type="text"
-         ath="-0.240" atv="0.148" 
+         ath="-0.265" atv="0.148" 
          distorted="false"
-         html="[b]Location in T3 [br] Floor Plan[b]"
+         html="[b]Bathoom 2 Location [br] in T3 Floor Plan[b]"
          css="font-family:Arial; font-size:16px; color:#000000;"
          vcenter="false"
          padding="2"
@@ -285,55 +285,9 @@
          mipmapping="false"
          onautosized=""
          />
-		<hotspot name="spot10" style="skin_hotspotstyle" ath="-0.240" atv="0.155" distorted="false" zoom="false" linkedscene="scene_bathroom_2_location" />
+		<hotspot name="spot10" style="skin_hotspotstyle" ath="-0.265" atv="0.155" distorted="false" zoom="false" linkedscene="scene_bathroom_2_location" />
 
-		<hotspot name="Bathroom 3"
-         type="text"
-         ath="-0.3" atv="0.083" 
-         distorted="false"
-         html="[b]Bathroom 3[b]"
-         css="font-family:Arial; font-size:16px; color:#000000;"
-         vcenter="false"
-         padding="2"
-         wordwrap="true"
-         selectable="false"
-         bg="false"
-         bgcolor="0xFFFFFF"
-         bgalpha="1.0"
-         bgborder="0"
-         bgroundedge="0"
-         bgshadow=""
-         txtshadow=""
-         mergedalpha="true"
-         oversampling="1.0"
-         mipmapping="false"
-         onautosized=""
-         />
-		<hotspot name="spot11" style="skin_hotspotstyle" ath="-0.3" atv="0.090" distorted="false" zoom="false" linkedscene="scene_layout_plan_and_rcp_(bathroom_3)" />
-
-		<hotspot name="Bathroom 2"
-         type="text"
-         ath="-0.3" atv="0.148" 
-         distorted="false"
-         html="[b]Bathroom 2[b]"
-         css="font-family:Arial; font-size:16px; color:#000000;"
-         vcenter="false"
-         padding="2"
-         wordwrap="true"
-         selectable="false"
-         bg="false"
-         bgcolor="0xFFFFFF"
-         bgalpha="1.0"
-         bgborder="0"
-         bgroundedge="0"
-         bgshadow=""
-         txtshadow=""
-         mergedalpha="true"
-         oversampling="1.0"
-         mipmapping="false"
-         onautosized=""
-         />
-		<hotspot name="spot12" style="skin_hotspotstyle" ath="-0.3" atv="0.155" distorted="false" zoom="false" linkedscene="scene_layout_plan_and_rcp_(bathroom_2)" />
+		
 
 	</scene>
 	
@@ -407,6 +361,30 @@
 			</level>
 		</image>
 
+        <hotspot name="Bathroom 2"
+         type="text"
+         ath="0.255" atv="0.017" 
+         distorted="false"
+         html="[b]Bathroom 2[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+        <hotspot name="spot2" style="skin_hotspotstyle" ath="0.255" atv="0.02" distorted="false" zoom="false" linkedscene="scene_layout_plan_and_rcp_(bathroom_2)" />
+
 		<hotspot name="Back to Mockup Floor Plan"
          type="text"
          ath="0.355" atv="0.017" 
@@ -453,6 +431,30 @@
 				<cylinder url="panos/Bathroom_3_Location.tiles/l1/%0v/l1_%0v_%0h.jpg" />
 			</level>
 		</image>
+
+        <hotspot name="Layout Plan(Bathroom 3)"
+         type="text"
+         ath="0.2" atv="0.017" 
+         distorted="false"
+         html="[b]Layout Plan[b]"
+         css="font-family:Arial; font-size:16px; color:#000000;"
+         vcenter="false"
+         padding="2"
+         wordwrap="true"
+         selectable="false"
+         bg="false"
+         bgcolor="0xFFFFFF"
+         bgalpha="1.0"
+         bgborder="0"
+         bgroundedge="0"
+         bgshadow=""
+         txtshadow=""
+         mergedalpha="true"
+         oversampling="1.0"
+         mipmapping="false"
+         onautosized=""
+         />
+        <hotspot name="spot11" style="skin_hotspotstyle" ath="0.2" atv="0.02" distorted="false" zoom="false" linkedscene="scene_layout_plan_and_rcp_(bathroom_3)" />
 
 		<hotspot name="Back to Mockup Floor Plan"
          type="text"
@@ -2375,11 +2377,11 @@
 			</level>
 		</image>
 
-        <hotspot name="Enclosed Kitchen"
+        <hotspot name="Enclosed Kitchen Floor Plan"
          type="text"
          ath="0.3" atv="0.162" 
          distorted="false"
-         html="[b]Enclosed Kitchen[b]"
+         html="[b]Floor Plan[b]"
          css="font-family:Arial; font-size:16px; color:#000000;"
          vcenter="false"
          padding="2"
@@ -3564,7 +3566,7 @@
 
 		<hotspot name="Floor Finish (Lift Car)"
          type="text"
-         ath="-0.350" atv="-0.208" 
+         ath="-0.380" atv="-0.208" 
          distorted="false"
          html="[b]Floor Finish[b]"
          css="font-family:Arial; font-size:16px; color:#000000;"
@@ -3584,11 +3586,11 @@
          mipmapping="false"
          onautosized=""
          />
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="-0.350" atv="-0.205" distorted="false" zoom="false" linkedscene="scene_floor_finish_(lift_car)" />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-0.380" atv="-0.205" distorted="false" zoom="false" linkedscene="scene_floor_finish_(lift_car)" />
 
 		<hotspot name="Elevation A &amp; B (Lift Car)"
          type="text"
-         ath="-0.225" atv="-0.208" 
+         ath="-0.245" atv="-0.208" 
          distorted="false"
          html="[b]Elevation A &amp; B[b]"
          css="font-family:Arial; font-size:16px; color:#000000;"
@@ -3608,7 +3610,7 @@
          mipmapping="false"
          onautosized=""
          />
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="-0.225" atv="-0.205" distorted="false" zoom="false" linkedscene="scene_elevation_a___b_(lift_car)" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-0.245" atv="-0.205" distorted="false" zoom="false" linkedscene="scene_elevation_a___b_(lift_car)" />
 
 		<hotspot name="Elevation C (Lift Car)"
          type="text"
