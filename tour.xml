@@ -95,7 +95,7 @@
 		</image>
 		<hotspot name="T3B Lift Lobby"
          type="text"
-         ath="-0.114" atv="-0.192" 
+         ath="-0.114" atv="-0.21" 
          distorted="false"
          html="[b]T3B Lift Lobby[b]"
          css="font-family:Arial; font-size:16px; color:#000000;"
@@ -115,7 +115,7 @@
          mipmapping="false"
          onautosized=""
          />
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="-0.114" atv="-0.188" distorted="false" zoom="false" linkedscene="scene_layout_plan_and_rcp_(t3b_lift_lobby)" />
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-0.114" atv="-0.2" distorted="false" zoom="false" linkedscene="scene_layout_plan_and_rcp_(t3b_lift_lobby)" />
 
 		<hotspot name="T3A Lift Lobby"
          type="text"
@@ -2779,7 +2779,7 @@
 
 		<hotspot name="RCP (T3A Lift Lobby)"
          type="text"
-         ath="-0.4" atv="-0.285" 
+         ath="-0.4" atv="-0.295" 
          distorted="false"
          html="[b]RCP[b]"
          css="font-family:Arial; font-size:16px; color:#000000;"
@@ -2803,7 +2803,7 @@
 
 		<hotspot name="Setting Out (T3A Lift Lobby)"
          type="text"
-         ath="-0.3" atv="-0.285" 
+         ath="-0.3" atv="-0.295" 
          distorted="false"
          html="[b]Setting Out[b]"
          css="font-family:Arial; font-size:16px; color:#000000;"
@@ -2827,7 +2827,7 @@
 
 		<hotspot name="Floor Finish (T3A Lift Lobby)"
          type="text"
-         ath="-0.2" atv="-0.29" 
+         ath="-0.2" atv="-0.295" 
          distorted="false"
          html="[b]Floor [br] Finish[b]"
          css="font-family:Arial; font-size:16px; color:#000000;"
@@ -2851,7 +2851,7 @@
 
 		<hotspot name="Elevation C, D, E, &amp; F (T3A Lift Lobby)"
          type="text"
-         ath="0.01" atv="-0.29" 
+         ath="0.01" atv="-0.295" 
          distorted="false"
          html="[b]Elevation [br] C, D, E, &amp; F[b]"
          css="font-family:Arial; font-size:16px; color:#000000;"
@@ -2875,7 +2875,7 @@
 
 		<hotspot name="Back to Mockup Floor Plan 2"
          type="text"
-         ath="0.273" atv="-0.29" 
+         ath="0.273" atv="-0.295" 
          distorted="false"
          html="[b]Mockup Floor Plan[b]"
          css="font-family:Arial; font-size:16px; color:#000000;"
@@ -2899,7 +2899,7 @@
 
 		<hotspot name="Elevation A &amp; B (T3A Lift Lobby)"
          type="text"
-         ath="-0.1" atv="-0.29" 
+         ath="-0.1" atv="-0.295" 
          distorted="false"
          html="[b]Elevation [br]A &amp; B[b]"
          css="font-family:Arial; font-size:16px; color:#000000;"
