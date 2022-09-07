@@ -89,7 +89,7 @@
 
 
 	<!-- ensure stagescale 2x for mobile devices (regardless if mobilescale is 0.5 or 1.0) -->
-	<krpano stagescale="calc:stagescale * 2" if="stagescale LT 1.0" devices="mobile" />
+	<krpano stagescale="calc:stagescale * 1" if="stagescale LT 1.0" devices="mobile" />
 
 
 	<!-- include VR support - http://krpano.com/plugins/webvr/ -->
